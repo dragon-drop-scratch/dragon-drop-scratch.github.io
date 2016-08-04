@@ -45,10 +45,12 @@ body {
     padding: 5px;
     float: left;
     font: 40px/60px Helvetica, sans-serif;
+    margin: 0;
 }
 #menu_opener:hover {
     cursor: pointer;
 }
-li::selection {
+li a::selection {
     color: #f1f1f1;
+    background-color: transparent;
 }
