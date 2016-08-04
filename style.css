@@ -1,41 +1,46 @@
-
 body {
-  background-color: #EDDEA4 /*Need to know the color scheme to do this*/;
-  margin: 0;
+    background-color: #EDDEA4
+    /*Need to know the color scheme to do this*/
+    ;
+    margin: 0;
 }
 #nav {
-  width: 100%;
-  height: 60px;
-  background-color: #D1C598 /*Need to know the color scheme to do this*/;
-  color: #fff;
-  -webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.50);
-  -moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.50);
-  box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.50);
-  font: 1.3em Helvetica, sans-serif;
-  text-align: center;
+    width: 100%;
+    height: 60px;
+    background-color: #D1C598
+    /*Need to know the color scheme to do this*/
+    ;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
+    font: 24px Helvetica, sans-serif;
+    text-align: center;
 }
 #nav, .nav {
-  list-style-type: none;
-  display: inline-block;
-  height: 60px;
-  white-space: nowrap;
-  font: 1.3em Helvetica, sans-serif;
-  padding: 0;
+    list-style-type: none;
+    display: inline-block;
+    height: 60px;
+    white-space: nowrap;
+    font: 24px Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
 }
 li {
-  float: left;
+    float: left;
+    padding-top: 18px;
 }
 li a {
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #fff;
-  text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    text-decoration: none;
 }
 #menu_opener {
-  transition: all .15s ease;
-  padding: 5px;
-  float: left;
-  font: 40px/60px Helvetica, sans-serif;
+    transition: all .15s ease;
+    padding: 5px;
+    float: left;
+    font: 40px/60px Helvetica, sans-serif;
 }
 #menu_opener:hover {
     cursor: pointer;
