@@ -1,3 +1,4 @@
+
 body {
   background-color: #EDDEA4 /*Need to know the color scheme to do this*/;
   margin: 0;
@@ -23,10 +24,14 @@ body {
   padding: 0;
 }
 li {
-    padding-top: 15%;
-    float: left;
-    padding-left: 5px;
-    padding-right: 5px;
+  float: left;
+}
+li a {
+  padding-top: 5%;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #fff;
+  text-decoration: none;
 }
 #menu_opener {
   transition: all .15s ease;
@@ -36,4 +41,7 @@ li {
 }
 #menu_opener:hover {
     cursor: pointer;
+}
+li::selection {
+    color: #f1f1f1;
 }
