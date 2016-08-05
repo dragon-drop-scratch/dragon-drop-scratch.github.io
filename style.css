@@ -45,13 +45,71 @@ body {
     transition: all .15s ease;
     padding: 5px;
     float: left;
-    font: 40px/60px Helvetica, sans-serif;
+    font: 40px/50px Helvetica, sans-serif;
     margin: 0;
 }
 #menu_opener:hover {
     cursor: pointer;
 }
+#shell {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 100px;
+}
+#shell .section {
+    margin:auto;
+    width: 60%;
+    margin-bottom: 20px;
+}
+#shell .section .section-head {
+    text-align: center;
+    font: 18px Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    background-color: #D1C598;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: 1px solid #BDB28C;
+}
+#shell .section .section-content {
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    background-color: #F7F7F7;
+    -webkit-box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.25);
+}
 li a::selection {
     color: #f1f1f1;
     background-color: transparent;
+}
+.logo {
+    text-align: center;
+    font: 40px/60px Helvetica, sans-serif;
+}
+.logo::selection {
+    color: #f1f1f1;
+    background-color: transparent;
+}
+#shell .mobile {
+    width: 100%;
+    margin-bottom: 15px;
+}
+#shell .mobile .mobile-head {
+    text-align: center;
+    font: 14px Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 5px;
+    background-color: #D1C598;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top: 1px solid #BDB28C;
+}
+#shell .mobile .mobile-content {
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    background-color: #F7F7F7;
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.51);
 }
