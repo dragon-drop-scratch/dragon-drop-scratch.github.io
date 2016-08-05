@@ -1,0 +1,26 @@
+{
+  "name": "dragon-drop-www-master",
+  "version": "0.0.1",
+  "description": "Dragon Drop",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragon-drop-scratch/dragon-drop-www.git"
+  },
+  "author": "Dragon Drop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dragon-drop-scratch/dragon-drop-www/issues"
+  },
+  "private": true,
+  "homepage": "https://github.com/dragon-drop-scratch/dragon-drop-www#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}

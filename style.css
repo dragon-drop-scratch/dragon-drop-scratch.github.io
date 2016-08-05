@@ -1,0 +1,147 @@
+body {
+    background-color: #EDDEA4
+    /*Need to know the color scheme to do this*/
+    ;
+    margin: 0;
+}
+#nav {
+    width: 100%;
+    height: 60px;
+    background-color: #D1C598
+    /*Need to know the color scheme to do this*/
+    ;
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
+    -moz-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
+    font: 24px Helvetica, sans-serif;
+    text-align: center;
+    position: fixed;
+}
+#nav, .nav {
+    list-style-type: none;
+    display: inline-block;
+    height: 60px;
+    white-space: nowrap;
+    font: 24px Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.nav li {
+    transition: all .15s ease;
+    float: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.nav li a {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+.nav li:hover {
+    transition: all .15s ease;
+    background-color: rgba(0, 0, 0, 0.10);
+}
+#menu_opener {
+    transition: all .15s ease;
+    padding: 5px;
+    float: left;
+    font: 40px/50px Helvetica, sans-serif;
+    margin: 0;
+}
+#menu_opener:hover {
+    cursor: pointer;
+}
+#shell {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 100px;
+}
+#shell .section {
+    margin:auto;
+    width: 60%;
+    margin-bottom: 20px;
+}
+#shell .section .section-head {
+    text-align: center;
+    font: 18px Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    background-color: #D1C598;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top: 1px solid #BDB28C;
+}
+#shell .section .section-content {
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    background-color: #F7F7F7;
+    -webkit-box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 6px 5px -2px rgba(0, 0, 0, 0.25);
+}
+li a::selection {
+    color: #f1f1f1;
+    background-color: transparent;
+}
+.logo {
+    text-align: center;
+    font: 40px/60px Helvetica, sans-serif;
+}
+.logo::selection {
+    color: #f1f1f1;
+    background-color: transparent;
+}
+#shellm .mobile {
+    width: 100%;
+    margin-bottom: 15px;
+}
+#shellm .mobile .mobile-head {
+    text-align: center;
+    font: 14px Helvetica, sans-serif;
+    font-weight: 600;
+    padding: 5px;
+    background-color: #D1C598;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top: 1px solid #BDB28C;
+}
+#shellm .mobile .mobile-content {
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    background-color: #F7F7F7;
+    -webkit-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.51);
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.51);
+}
+#shellm {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 30px;
+}
+.s {
+    transition: all .15s ease;
+    text-decoration: none;
+    color: black;
+}
+header {
+    padding-top: 70px;
+    background-color: #BDB28C;
+    text-align: center;
+    font: 20px helvetica, sans-serif;
+    padding-bottom: 10px;
+}
+.ul {
+    list-style-type: none;
+    margin: 2px;
+    padding-left: 0;
+}
+.li {
+    transition: all .15s ease;
+    padding: 5px;
+}
+.li:active {
+    transition: all .15s ease;
+    background-color: #D1C598;
+}
