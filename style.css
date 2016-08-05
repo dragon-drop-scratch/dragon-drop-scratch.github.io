@@ -28,6 +28,7 @@ body {
     margin: 0;
 }
 .nav li {
+    transition: all .15s ease;
     float: left;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -39,6 +40,7 @@ body {
     text-decoration: none;
 }
 .nav li:hover {
+    transition: all .15s ease;
     background-color: rgba(0, 0, 0, 0.10);
 }
 #menu_opener {
@@ -136,8 +138,10 @@ header {
     padding-left: 0;
 }
 .li {
+    transition: all .15s ease;
     padding: 5px;
 }
 .li:active {
+    transition: all .15s ease;
     background-color: #D1C598;
 }
