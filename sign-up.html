@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -12,51 +11,59 @@
                 background-repeat: no-repeat;
                 background-size: 100% 120%;
             }
-            textarea {
-                resize: none;
-                /*Makes it so the user can not resize the box*/
-            }
             h1 {
                 font-family:'Play', sans-serif;
+                font-size: 600%;
+                color: brown;
             }
-            #signup {
+            h2 {
+                font-family:'Calibri', sans-serif;
+                font-size: 300%;
+                font-weight: lighter;
+                color: #D2E3AE ;
+            }
+            h3 {
+                font-family:'Calibri', sans-serif;
+                font-size: 170%;
+                font-weight: lighter;
+                color: #D2E3AE ;
+            }
+            input {
               
-font-size: larger;
-color: #fff;
-background-color: #7ebb00;
-border-radius: 5px;
-border-color: #7ebb00;
-              } 
+              font-size: larger;
+              color: #fff;
+              background-color: #7ebb00;
+              border-radius: 5px;
+              border-color: #7ebb00;
+            }
         </style>
     </head>
 
     <body>
-
-         <h1 style="text-align:center;">Sign Up!</h1>
-        <p style="text-align:center;">The first step to creating your awesome website!</p>
-
-        <p>Username:</p>
-        <input id="username" type="textbox" placeholder="Username" />
-
-        <p>Password:</p>
-        <input id="password" type="password" placeholder="Password" />
-
-
-        <p>Legal Full Name:</p>
-        <input id="fullname" type="textbox" placeholder="Full Name" />
-        <p>Scratch Account (Leave this blank if you don't have one!):</p>
-        <input id="scratch" type="textbox" placeholder="Scratch Account" />
-
-        <p>Email Account:</p>
-        <input id="email" type="textbox" placeholder="Email Account!" />
-
-        <p>Why do you want to Sign Up? Give an Explanation on what the
-            <br>website will be used for:</p>
-        <textarea rows="4" cols="50"></textarea>
+        
+        <h1>Sign Up!</h1>
+        
+        <h3 style="text-align:center;">The first step to creating your awesome website!</h3>
         <br>
         <br>
         <br>
-        <input id="signup" type="Submit" value="Sign Up!"></input>
+        <h2>Are you a Scratch User?</h2>
+        <input type="button"value="Yes" onclick = "goToNextPage(true)"/>  <input type="button"value="No" onclick = "goToNextPage(true)"/>
+      
+      <script>
+        
+        
+        function goToNextPage (boolean input) {
+          if(!input){
+            document.location = "/normaluser.html";
+          }
+          else {
+            
+          }
+          
+        }
+        
+      </script>
     </body>
 
 </html>
