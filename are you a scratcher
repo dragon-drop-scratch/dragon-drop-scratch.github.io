@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
+        <title>DragonDrop -- Sign Up</title>
+        <style>
+            body {
+                text-align:center;
+                background-image: url(https://trello-attachments.s3.amazonaws.com/57a6079d2f7642ffb20d62af/1024x566/f486c28d7a873099a66061991023b766/photo.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 120%;
+            }
+            h1 {
+                font-family:'Play', sans-serif;
+                font-size: 600%;
+                color: brown;
+            }
+            h2 {
+                font-family:'Calibri', sans-serif;
+                font-size: 300%;
+                font-weight: lighter;
+                color: #D2E3AE ;
+            }
+            h3 {
+                font-family:'Calibri', sans-serif;
+                font-size: 170%;
+                font-weight: lighter;
+                color: #D2E3AE ;
+            }
+            input {
+              
+              font-size: larger;
+              color: #fff;
+              background-color: #7ebb00;
+              border-radius: 5px;
+              border-color: #7ebb00;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <h1>Sign Up!</h1>
+        
+        <h3 style="text-align:center;">The first step to creating your awesome website!</h3>
+        <br>
+        <br>
+        <br>
+        <h2>Are you a Scratch User?</h2>
+        <input type="button"value="Yes" onclick = "goToNextPage(true)"/>  <input type="button"value="No"/>
+      
+      <script>
+        
+        
+        function goToNextPage (boolean input) {
+          
+          
+        }
+        
+      </script>
+    </body>
+
+</html>
