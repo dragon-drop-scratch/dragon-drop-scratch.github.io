@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Play';
+
 body {
     background-color: #EDDEA4
     /*Need to know the color scheme to do this*/
@@ -65,7 +67,7 @@ body {
 }
 #shell .section .section-head {
     text-align: center;
-    font: 18px Helvetica, sans-serif;
+    font: 18px 'Play', sans-serif;
     font-weight: 700;
     padding: 5px;
     background-color: #D1C598;
