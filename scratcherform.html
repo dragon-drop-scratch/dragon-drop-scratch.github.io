@@ -36,26 +36,26 @@ border-color: #7ebb00;
     <body>
 
          <h1 style="text-align:center;">Sign Up!</h1>
-        <form action="MAILTO:coke11scratch@gmail.com" method="post" enctype="text/plain">
+        <form action="scratcher.php" method="post">
         <p>Scratch Username:</p>
-        <input id="Scratchusername" type="text" placeholder="Scratch Username" />
+        <input id="Scratchusername" name="name" type="text" placeholder="Scratch Username" />
 
         <p>Password:</p>
-        <input id="password" type="password" placeholder="Password" />
+        <input id="password" name="pass" type="password" placeholder="Password" />
 
 <h3>Whhat will you be using the site for?</h3>
 <form>
-  <input type="radio" name="gender" value="blog" checked> Blog<br>
-  <input type="radio" name="gender" value="forum"> Forum<br>
-  <input type="radio" name="gender" value="site"> Site
+  <input type="radio" name="reason" value="blog" checked> Blog<br>
+  <input type="radio" name="reason" value="forum"> Forum<br>
+  <input type="radio" name="reason" value="site"> Site
 </form>
 
         <br>
         <br>
         <br>
-        <input id="signup"type="Submit" value="Sign Up!"></input>
+        <input id="signup" type="Submit" value="Sign Up!"></input>
         
-        <input id="reset"type="Reset" value="Reset"></input>
+        <input id="reset" type="Reset" value="Reset"></input>
         </form>
         
       <script>
