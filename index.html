@@ -104,13 +104,16 @@
         
     </div>
     
-    <a z-index="1" href="./sign-up.html" style = "top: 20%" class="Button" >Sign Up Free</a>
+    <a z-index="1" href="./sign-up.html" style = "top: 20%" class="Button" onclick="goto()">Sign Up Free</a>
     
     <hr>
     <!--Detecting mobile-->
     <script type="text/javascript">
       if (screen.width < 700) {
         document.location = "./mobile.html";
+      }
+      function goto(){
+      	document.location = url("./signup.html")
       }
     </script>
   </body>
