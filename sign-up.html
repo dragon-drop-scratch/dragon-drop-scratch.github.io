@@ -20,13 +20,13 @@
                 font-family:'Play', sans-serif;
                 font-size: 600%;
                 color: brown;
-                background:black;
+                
             }
             h2 {
                 font-family:'Calibri', sans-serif;
                 font-size: 300%;
                 font-weight: lighter;
-                background:black;
+                
                 color: #D2E3AE ;
             }
             h3 {
@@ -34,7 +34,7 @@
                 font-size: 170%;
                 font-weight: lighter;
                 color: #D2E3AE ;
-                background:black;
+                
             }
             input {
               
@@ -50,12 +50,15 @@
             #dropiframe{
                 background:white;
             }
+            #textdiv{
+                background:black;
+            }
         </style>
     </head>
 
     <body>
 
-        <h1>Sign Up!</h1>
+        <div id="textdiv"><h1>Sign Up!</h1>
         
         <h3 style="text-align:center;">The first step to creating your amazing website!</h3>
         <br>
@@ -64,7 +67,7 @@
         <h2>Are you a Scratch User?</h2>
         <input type="button"value="Yes" onclick = "goToNextPage(true)"/>  <input type="button"value="No" onclick = "goToNextPage(false)"/>
       
-       <br><a href="./index.html">Go back to home</a><br><iframe src="droptipsignuppage.html" width="50%" id="dropiframe" height="275px"></iframe>
+       <br><a href="./index.html">Go back to home</a><br><iframe src="droptipsignuppage.html" width="50%" id="dropiframe" height="275px"></iframe></div>
       <script>
         
         
