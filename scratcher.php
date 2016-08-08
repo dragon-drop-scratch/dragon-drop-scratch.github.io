@@ -1,18 +1,27 @@
 <?php
-/* Connect to a MySQL database using driver invocation */
-$dsn = 'mysql:dbname=d217710;host=db4free.net';
-$user = 'd217710';
-$password = 'csf30816';
+$servername = "db4free.net";
+$username = "d217710";
+$password = "csf30816";
+$dbname = "d217710";
 
 $name=$_POST["name"];
 $pass=$_POST["pass"];
 $type=$_POST["reason"];
 
-try {
-    $dbh = new PDO($dsn, $user, $password);
-	$sql = 'INSERT INTO `scratch`(`user`, `pass`, `type`) VALUES ($name,$pass,$site)';
-} catch (PDOException $e) {
-    echo 'Connection failed: ' . $e->getMessage();
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "INSERT INTO scratch (user, pass, type)
+VALUES ('$name', '$pass', '$type')";
+if ($conn->query($sql) === TRUE) {
+	echo "The account <b>" . $name . "</b> has been created with the password <b>" . $pass . "</b>. Have a nice day!";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+$conn->close();
 ?>
