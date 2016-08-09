@@ -9,6 +9,7 @@ $type=$_POST["reason"];
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 $result = $conn->query("SELECT id FROM scratch WHERE user = '$name'");
+$userexists = $conn->query("SELECT id FROM users WHERE username = '$name'");
 // Check connection
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
@@ -19,7 +20,7 @@ if ($pass != 'password') {
 			if ($name != '') { //Makes sure the name is not empty
 				if ($pass != '') { //Makes sure the password is not empty
 					if ($pass != $name) { //makes sure the username is not the password
-						if ($result->num_rows == 0) { //Makes sure the user does not already exist
+						if ($result->num_rows and $userexists->num_rows == 0) { //Makes sure the user does not already exist
 							$sql = "INSERT INTO scratch (user, pass, type)
 VALUES ('$name', '$pass', '$type')";
 							if ($conn->query($sql) === TRUE) {
