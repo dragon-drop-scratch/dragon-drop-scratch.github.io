@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 $space='strpos($name, " ")';
-if ($space === false) {
+if ($space == true) {
 	if ($pass != 'password') {
 		if (strlen($name) >= 3) {
 			if (strlen($pass) >= 6) {
