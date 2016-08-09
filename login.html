@@ -10,18 +10,29 @@
      font-size:500%;
   }
   p {
+    width: 60%;
+    margin: auto;
     text-align: center;
     font-size:30px;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight:lighter;
+    margin-top: 20px;
   }
-  input {
-    font-size: 25px;  
+  input[type=text], input[type=password] {
+    font-size: 25px;
+    border: 0;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.05);
+    padding: 5px;
+    border-radius: 5px;
+    width: 40%;
   }
   body {
     background-color: #ECE1CC;  
   }
   input[type=submit] {
+    font-size: 25px;
+    margin-top: 50px;
     transition: 0.60s all ease-in;
     border: 0;
     background-color: #fcfcfc;
@@ -34,6 +45,24 @@
     border: 1px solid black;
     cursor: pointer;
   }
+  .input {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 10;
+  }
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    #fff;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:    #fff;
+  }
   </style>
 </head>
 <body>
@@ -44,9 +73,9 @@
 <br>
 
 <form action="login.php" method="post">
-<p>Username: <input type="textbox" placeholder="Username here" name="username"></p>
+<p class="input">Username: <input type="text" placeholder="Username here" name="username"></p>
 <br>
-<p>Password: <input type="password" placeholder="Password here" name="password"></p>
+<p class="input">Password: <input type="password" placeholder="Password here" name="password"></p>
 <p>
 <input type="submit" value="Sign in">
 </p>
