@@ -12,7 +12,7 @@ $email=$_POST["email"];
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 $result = $conn->query("SELECT id FROM scratch WHERE user = '$name'");
-$userexists = $conn->query("SELECT id FROM users WHERE user = '$name'");
+$userexists = $conn->query("SELECT id FROM users WHERE username = '$name'");
 // Check connection
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
