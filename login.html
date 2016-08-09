@@ -16,10 +16,23 @@
     font-weight:lighter;
   }
   input {
-    font-size: 30px;  
+    font-size: 25px;  
   }
   body {
     background-color: #ECE1CC;  
+  }
+  input[type=submit] {
+    transition: 0.60s all ease-in;
+    border: 0;
+    background-color: #fcfcfc;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  input[type=submit]:hover {
+    transition: 0.30s all ease-out;
+    background-color: /*#f2f2f2*/ #ece1cc;
+    border: 1px solid black;
+    cursor: pointer;
   }
   </style>
 </head>
@@ -30,10 +43,14 @@
 <br>
 <br>
 
-<p>Username: <input type="textbox" placeholder="Type your Username here"></input><br><p>Password: <input type="password" placeholder="Type your Password here"></input></p></p>
-
-
-
+<form action="login.php" method="post">
+<p>Username: <input type="textbox" placeholder="Username here" name="username"></p>
+<br>
+<p>Password: <input type="password" placeholder="Password here" name="password"></p>
+<p>
+<input type="submit" value="Sign in">
+</p>
+</form>
 
 </body>
 </html>
