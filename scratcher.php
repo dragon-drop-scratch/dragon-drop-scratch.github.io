@@ -25,7 +25,7 @@ if ($space === false) {
 								$sql = "INSERT INTO scratch (user, pass, type)
 VALUES ('$name', '$pass', '$type')";
 								if ($conn->query($sql) === TRUE) {
-									echo "The account <b>" . $name . "</b> has been created with the password <b>" . $pass . "</b>. Have a nice day!";
+									echo "The account <b>" . $name . "</b> has been created with the password length of <b>" . strlen($pass) . "</b>. Have a nice day!";
 								} else {
 									echo "Error: " . $sql . "<br>" . $conn->error;
 								}
