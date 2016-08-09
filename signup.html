@@ -4,95 +4,67 @@
 
     <head>
 <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
-
-    <link href="./style.css" rel="stylesheet">
         <title>DragonDrop -- Sign Up</title>
         <style>
             body {
                 text-align:center;
-                background-image: url(https://trello-attachments.s3.amazonaws.com/57a6079d2f7642ffb20d62af/1024x566/f486c28d7a873099a66061991023b766/photo.jpg);
+                background: #D1C599;
+                background-image: linear-gradient(to bottom right, #D1C599, white);
                 background-repeat: no-repeat;
                 background-size: 100% 200%;
-                margin: 0;
-                padding: 0;
-                
             }
             h1 {
                 font-family:'Play', sans-serif;
                 font-size: 600%;
                 color: brown;
-                
             }
-            h2 {
+            p {
                 font-family:'Calibri', sans-serif;
-                font-size: 300%;
+                font-size: 150%;
                 font-weight: lighter;
-                
-                color: #D2E3AE ;
-            }
-            h3 {
-                font-family:'Calibri', sans-serif;
-                font-size: 170%;
-                font-weight: lighter;
-                color: #D2E3AE ;
-                
-            }
-            input {
-              
-              font-size: larger;
-              color: #fff;
-              background-color: #7ebb00;
-              border-radius: 5px;
-              border-color: #7ebb00;
-            }
-            #nav {
-                position: inherit;
-            }
-            #dropiframe{
-                border: none;
-                margin: auto;
-                overflow: hidden;
-            }
-            #textdiv{
-                background:black;
-                width: 100%;
-                min-width: 300px;
-                width:50%;
-                margin: auto;
-            }
-            .orangetext {
-                margin-top: 0;
-            }
+                /*color:  ;*/
+            }           
+            #signup {
+font-size: larger;
+color: #fff;
+background-color: #7ebb00;
+border-radius: 5px;
+border-color: #7ebb00;
+              } 
+              textarea {
+                margin: auto; 
+              }
         </style>
     </head>
 
     <body>
+<form action="signup.php" method="post">
+        <h1 style="text-align:center;">Sign Up!</h1>
 
-        <div id="textdiv"><h1>Sign Up!</h1>
-        
-        <h3 style="text-align:center;">The first step to creating your amazing website!</h3>
+        <p>Username:</p>
+        <input id="username" type="text" placeholder="Username" name="name"/>
+
+        <p>Password:</p>
+        <input id="password" type="password" placeholder="Password" name="pass"/>
+
+
+        <p>Legal Full Name:</p>
+        <input id="fullname" type="text" placeholder="Full Name" name="fname"/>
+
+        <p>Email Account:</p>
+        <input id="email" type="text" placeholder="Email Account!" name="email"/>
+
+        <p>Why do you want to Sign Up? Give an Explanation on what the
+            <br>website will be used for:</p>
+        <textarea rows="4" cols="35" name="reason"></textarea>
         <br>
         <br>
         <br>
-        <h2>Are you a Scratch User?</h2>
-        <input type="button" value="Yes" onclick="goToNextPage(true)"/>  <input type="button" value="No" onclick="goToNextPage(false)" />
-      
-       <br><a href="./index.html">Go back to home</a><br><iframe src="droptipsignuppage.html" width="100%" id="dropiframe" height="250px"></iframe></div>
+        <input id="signup" type="Submit" value="Sign Up!">
+</form>  
       <script>
-        
-        
-        function goToNextPage (input) {
-          if(!input){
-            document.location = "./normaluser.html";
-          }
-          else {
-            
-            document.location = "./scratcherform.html";
-          }
-          
-        }
-        
       </script>
+      <a href="./index.html">Go back to home</a>
     </body>
 
 </html>
