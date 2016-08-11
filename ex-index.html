@@ -14,13 +14,20 @@
                 font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
                 
                 
-                background: url(images/<?php echo $selectedBg; ?>) no-repeat center center fixed;
+               
 
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
                 background-size: cover;
             }
+            <style type="text/css">
+<!--
+body{
+background: url(images/<?php echo $selectedBg; ?>) no-repeat;
+}
+-->
+</style>
             #backdiv {
                 margin: auto;
                 border-radius: 50px;
