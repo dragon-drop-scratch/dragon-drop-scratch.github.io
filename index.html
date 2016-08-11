@@ -63,6 +63,53 @@
                 position:relative;
                 top:1px;
             }
+            .typeddiv{
+  background: #000;
+  padding-top: 10px;
+ 
+} 
+
+#typed{
+  color: lime; 
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end); 
+}
+
+p:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+p a{
+  color: lime;
+  text-decoration: none;
+}
+
+span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
             .greyandtransparentlearnmorebutton {
 	-moz-box-shadow: 3px 4px 0px 0px #899599;
 	-webkit-box-shadow: 3px 4px 0px 0px #899599;
@@ -155,7 +202,8 @@
                     <div class="section-content">DragonDrop is a <b></b> online tool you can use to create your own professional websites in minutes without needing any coding knowledge. Just drag and drop some simple elements onto the screen and there you'll have it, your own website
                         ready for the whole world to see. We love seeing your creations, so get creative!</div>
                 </div>
-
+<div class="section"><div class="typeddiv"><h1 id="typed">No coding needed.<span>|</span></h1><br><br><br>
+</div></div>
                 <div class="section">
                     <div class="section-head">Features</div>
                     <div class="section-content">
