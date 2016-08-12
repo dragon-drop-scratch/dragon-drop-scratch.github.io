@@ -1,5 +1,42 @@
 <DOCTYPE html>	
 <html lang="en"><head>
+	<script src="jquery-1.12.4.min.js">(function($){
+    $.fn.extend({ 
+        rotaterator: function(options) {
+ 
+            var defaults = {
+                fadeSpeed: 500,
+                pauseSpeed: 100,
+				child:null
+            };
+             
+            var options = $.extend(defaults, options);
+         
+            return this.each(function() {
+                  var o =options;
+                  var obj = $(this);                
+                  var items = $(obj.children(), obj);
+				  items.each(function() {$(this).hide();})
+				  if(!o.child){var next = $(obj).children(':first');
+				  }else{var next = o.child;
+				  }
+				  $(next).fadeIn(o.fadeSpeed, function() {
+						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+							var next = $(this).next();
+							if (next.length == 0){
+									next = $(obj).children(':first');
+							}
+							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+						})
+					});
+            });
+        }
+    });
+})(jQuery);
+
+ $(document).ready(function() {
+        $('#rotate').rotaterator({fadeSpeed:500, pauseSpeed:100});
+ });</script>
         <title>DragonDrop</title>
         <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
         <link href="./style.css" rel="stylesheet">
@@ -180,43 +217,7 @@ p a{
                     </div>
                 </div>
                 <div id="textdiv" class="section">
-                    <script>(function($){
-    $.fn.extend({ 
-        rotaterator: function(options) {
- 
-            var defaults = {
-                fadeSpeed: 500,
-                pauseSpeed: 100,
-				child:null
-            };
-             
-            var options = $.extend(defaults, options);
-         
-            return this.each(function() {
-                  var o =options;
-                  var obj = $(this);                
-                  var items = $(obj.children(), obj);
-				  items.each(function() {$(this).hide();})
-				  if(!o.child){var next = $(obj).children(':first');
-				  }else{var next = o.child;
-				  }
-				  $(next).fadeIn(o.fadeSpeed, function() {
-						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
-							var next = $(this).next();
-							if (next.length == 0){
-									next = $(obj).children(':first');
-							}
-							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
-						})
-					});
-            });
-        }
-    });
-})(jQuery);
-
- $(document).ready(function() {
-        $('#rotate').rotaterator({fadeSpeed:500, pauseSpeed:100});
- });</script>
+                	
                     <h1 class="whitetext">Make your website <div id="rotate"> <div>awesome.</div> <div>invincible.</div> <div>unbeatable.</div><div>going the extra mile.</div> <div>indestructible.</div><div>popular.</div><div>unbeatable.</div><div>ready.</div><div>glowing.</div><div>a hero.</div> <div>smart.</div><div>usfull.</div><div>advanced.</div><div>instant.</div><div>sleek.</div><div>modern.</div><div>amazing.</div><div>quality.</div><div>real.</div><div>spectacular.</div> </div></h1>	
                     
                     <div class="p"><a href="./signup.html" style="top: 94%" class="Button" onclick="goto()">Sign Up For Free</a>
