@@ -3,10 +3,10 @@ $servername = "db4free.net";
 $username = "d217710";
 $password = "csf30816";
 $dbname = "d217710";
-$name=$_POST["name"];
-$pass=$_POST["pass"];
-$type=$_POST["reason"];
-$pass2=$_POST["pass2"];
+$name='jeff';
+$pass='123456789';
+$type='Site';
+$pass2='123456789';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 $result = $conn->query("SELECT id FROM scratch WHERE user = '$name'");
@@ -22,13 +22,17 @@ if ($pass === $pass2) {
 				if ($name != '') { //Makes sure the name is not empty
 					if ($pass != '') { //Makes sure the password is not empty
 						if ($pass != $name) { //makes sure the username is not the password
-							if ($result->num_rows and $userexists->num_rows !== 0) { //Makes sure the user does not already exist
-								$sql = "INSERT INTO scratch (user, pass, type)
+							if ($result->num_rows == 0) { //Makes sure the user does not already exist
+								if ($userexists->num_rows == 0) {
+									$sql = "INSERT INTO scratch (user, pass, type)
 VALUES ('$name', '$pass', '$type')";
-								if ($conn->query($sql) === TRUE) {
-									echo "The account <b>" . $name . "</b> has been created with the password length of <b>" . strlen($pass) . "</b>. Have a nice day!";
+									if ($conn->query($sql) === TRUE) {
+										echo "The account <b>" . $name . "</b> has been created with the password length of <b>" . strlen($pass) . "</b>. Have a nice day!";
+									} else {
+										echo "Error: " . $sql . "<br>" . $conn->error;
+									}
 								} else {
-									echo "Error: " . $sql . "<br>" . $conn->error;
+									echo "Sorry, but that user already exists";
 								}
 							} else {
 								echo "Sorry, but that user already exists";
