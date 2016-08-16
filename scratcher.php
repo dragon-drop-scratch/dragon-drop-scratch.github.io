@@ -22,7 +22,7 @@ if ($pass === $pass2) {
 				if ($name != '') { //Makes sure the name is not empty
 					if ($pass != '') { //Makes sure the password is not empty
 						if ($pass != $name) { //makes sure the username is not the password
-							if ($result->num_rows and $userexists->num_rows == 0) { //Makes sure the user does not already exist
+							if ($result->num_rows and $userexists->num_rows !== 0) { //Makes sure the user does not already exist
 								$sql = "INSERT INTO scratch (user, pass, type)
 VALUES ('$name', '$pass', '$type')";
 								if ($conn->query($sql) === TRUE) {
