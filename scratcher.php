@@ -3,10 +3,10 @@ $servername = "db4free.net";
 $username = "d217710";
 $password = "csf30816";
 $dbname = "d217710";
-$name='jeff';
-$pass='123456789';
-$type='Site';
-$pass2='123456789';
+$name=$_POST['name'];;
+$pass=$_POST['pass'];
+$type=$_POST['reason'];
+$pass2=$_POST['pass2'];
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 $result = $conn->query("SELECT id FROM scratch WHERE user = '$name'");
