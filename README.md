@@ -10,4 +10,4 @@ Warning! Any code contributed is owened by Dragon Drop.
 
 If you have a Scratch account and would like to help out with the development, please do. You can find the application forms all at: https://scratch.mit.edu/discuss/topic/211653
 ## View it so far
-You can view are progress here: https://dragon-drop-scratch.github.io/dragon-drop-www/
+You can view our progress here: https://dragon-drop-scratch.github.io/dragon-drop-www/
