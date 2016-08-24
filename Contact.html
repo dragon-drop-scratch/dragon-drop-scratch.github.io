@@ -24,6 +24,28 @@
         
       </ul>
     </nav>
+    
+    <div id="shell">
+        <div id="section">
+            <div id="section-head">
+                Contact!
+            </div>
+            <div id="section-content">
+                Are you a Scratcher?
+                <br>
+                <button value="yes" onclick="yes()" >YES</button>
+                <button value="no" onclick="no()" >NO</button>
+            </div>
+        </div>
+    </div>
+    <script> 
+        function yes() {
+            document.location = url("./ScratcherContact.html");
+        }
+        function no(){
+            document.location = url("./Non-ScratcherContact.html");
+        }
+    </script>
 </body>
 
 </html>
