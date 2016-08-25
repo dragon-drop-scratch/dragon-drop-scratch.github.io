@@ -1,7 +1,7 @@
 <?php
 $servername = "db4free.net";
 $username = "d217710";
-$password = "csf30816";
+$password = "<CENSORED, please change this.";
 $dbname = "d217710";
 $name=$_POST['name'];;
 $pass=$_POST['pass'];
