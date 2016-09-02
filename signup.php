@@ -23,28 +23,33 @@ if ($email == $email2) {
 		if ($pass != 'password') {
 			if (strlen($name) >= 3) {
 				if (strlen($pass) >= 6) {
-					if ($name != '') { //Makes sure the name is not empty
-						if ($pass != '') { //Makes sure the password is not empty
-							if ($pass != $name) { //makes sure the username is not the password
-								if ($result->num_rows == 0) { //Makes sure the user does not already exist
-								if ($userexists->num_rows == 0) {
-									$sql = "INSERT INTO users (username, password, fullname, email, reason)
-VALUES ('$name', '$pass', '$fname', '$email', '$reason')";
-									if ($conn->query($sql) === TRUE) {
-										echo "The account <b>" . $name . "</b> has been created with the password length of <b>" . strlen($pass) . "</b>. Have a nice day!";
-										echo "<br>You will recieve an email with your information shortly.";
+					if($pass != 'password')
+						if ($name != '') { //Makes sure the name is not empty
+							if ($pass != '') { //Makes sure the password is not empty
+								if ($pass != $name) { //makes sure the username is not the password
+									if ($result->num_rows == 0) { //Makes sure the user does not already exist
+									if ($userexists->num_rows == 0) {
+										$sql = "INSERT INTO users (username, password, fullname, email, reason)
+	VALUES ('$name', '$pass', '$fname', '$email', '$reason')";
+										if ($conn->query($sql) === TRUE) {
+											echo "The account <b>" . $name . "</b> has been created with the password length of <b>" . strlen($pass) . "</b>. Have a nice day!";
+											echo "<br>You will recieve an email with your information shortly.";
+										} else {
+											echo "Error: " . $sql . "<br>" . $conn->error;
+										}
+										} else {
+											echo "Sorry, That user already exists";
+										} 
 									} else {
-										echo "Error: " . $sql . "<br>" . $conn->error;
+										echo "Sorry, but that user already exists";
+										echo "<br><a href='./'>Go Home?</a>";
 									}
-									} else {
-										echo "Sorry, That user already exists";
-									} 
 								} else {
-									echo "Sorry, but that user already exists";
+									echo "Sorry, but your username and password can not be the same";
 									echo "<br><a href='./'>Go Home?</a>";
 								}
 							} else {
-								echo "Sorry, but your username and password can not be the same";
+								echo "Sorry, but your password can not be blank";
 								echo "<br><a href='./'>Go Home?</a>";
 							}
 						} else {
@@ -52,7 +57,7 @@ VALUES ('$name', '$pass', '$fname', '$email', '$reason')";
 							echo "<br><a href='./'>Go Home?</a>";
 						}
 					} else {
-						echo "Sorry, but your password can not be blank";
+						echo "Sorry, but your password cannot be the word 'password' ";
 						echo "<br><a href='./'>Go Home?</a>";
 					}
 				} else {
