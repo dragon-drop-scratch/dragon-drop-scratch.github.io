@@ -1,5 +1,5 @@
 [![GitHub stars](https://img.shields.io/badge/Star-dragon--drop--www-green.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/stargazers)
-[![GitHub watchers](https://img.shields.io/badge/Fork-dragon--drop--www-green.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/graphs/contributors#fork-destination-box)
+[![GitHub watchers](https://img.shields.io/badge/Fork-dragon--drop--www-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/graphs/contributors#fork-destination-box)
 [![Version](https://img.shields.io/badge/version-0.1.3--alpha-blue.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/releases)
 
 
