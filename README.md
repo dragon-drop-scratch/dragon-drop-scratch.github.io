@@ -1,9 +1,12 @@
+[![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Star&maxAge=2592000)](https://github.com/dragon-drop-scratch/dragon-drop-www/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/badges/shields.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/dragon-drop-scratch/dragon-drop-www/graphs/contributors#fork-destination-box)
+[![Version](https://img.shields.io/badge/version-0.1.3--alpha-blue.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/releases)
 
 
 # DragonDrop official source code
 DragonDrop is a free, quick and easy soloution for creating your own professional website in minutes. With a couple of drags and drops you can have your very own personalised website. This was founded by Coke11 and more contributors have recently joined and helped out with the development progress. This website tool has been created with fellow Scratchers at https://scratch.mit.edu in mind as it includes elements and modules that will help any Scratcher create their very own, impressive Scratch website, whether if thats a blog to a showcase you can create it all here!
 ## Using various parts of source code
-We do allow people to use various SMALL parts of the source code for their own projects. However no matter what piece of source code that is you must give credit to the entire development team at DragonDrop. You must get express permission from both @golden-scratch and @coke11.
+Source code is available for use, but appropriate credit <b>MUST</b> be given.
 ## Become a contributor
 
 If you have a Scratch account and would like to help out with the development, please do. You can find the application forms all at: https://scratch.mit.edu/discuss/topic/211653
