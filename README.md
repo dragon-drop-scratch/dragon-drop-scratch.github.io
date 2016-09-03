@@ -1,6 +1,8 @@
 [![GitHub stars](https://img.shields.io/badge/star-dragon--drop--www-green.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/stargazers)
 [![GitHub watchers](https://img.shields.io/badge/fork-dragon--drop--www-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/graphs/contributors#fork-destination-box)
 [![Version](https://img.shields.io/badge/version-0.1.3--alpha-blue.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/releases)
+[![Contribute](https://img.shields.io/badge/contribute-dragon--drop--www-yellow.svg)](https://scratch.mit.edu/discuss/topic/211653)
+[![License](https://img.shields.io/badge/license-MIT-AA00AA.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/blob/gh-pages/node_modules/balanced-match/LICENSE.md)
 
 
 # DragonDrop official source code
