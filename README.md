@@ -18,7 +18,7 @@ You can view our progress here: https://dragon-drop-scratch.github.io/dragon-dro
 
 ## Issues
 [![3 issues open](https://img.shields.io/badge/issues-3%20open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aopen)
-[![34 issues closed](https://img.shields.io/badge/issues-34%20closed-brightgreen.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?utf8=%E2%9C%93&q=is%3Aclosed)
+[![34 issues closed](https://img.shields.io/badge/issues-34%20closed-brightgreen.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aissue+is%3Aclosed)
 <br>
 [![Issue #54](https://img.shields.io/badge/issue%20%2354-open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues/54)
 <br>
