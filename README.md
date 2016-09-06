@@ -17,10 +17,14 @@ If you have a Scratch account and would like to help out with the development, p
 You can view our progress here: https://dragon-drop-scratch.github.io/dragon-drop-www/
 
 ## Issues
-[![4 issues open](https://img.shields.io/badge/issues-4%20open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aopen)
+[![6 issues open](https://img.shields.io/badge/issues-6%20open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aopen)
 <br>
 [![36 issues closed](https://img.shields.io/badge/issues-36%20closed-brightgreen.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aissue+is%3Aclosed)
 ### Open issues:
+[![Issue #25](https://img.shields.io/badge/issue%20%2325-open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues/25)
+<br>
+[![Issue #58](https://img.shields.io/badge/issue%20%2358-open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues/58)
+<br>
 [![Issue #57](https://img.shields.io/badge/issue%20%2357-open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues/57)
 <br>
 [![Issue #54](https://img.shields.io/badge/issue%20%2354-open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues/54)
