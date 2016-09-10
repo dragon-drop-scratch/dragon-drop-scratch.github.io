@@ -24,6 +24,19 @@
     <div id="shell">
       <div id="google-login-api">
         <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="689603573067-2cvduvek94n7rouvten1rfb0lv3v11ij.apps.googleusercontent.com">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <br>
+        <br>
+        <a href="#" onclick="signOut();">Sign out</a>
+        <script>
+          function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+              console.log('User signed out.');
+            });
+          }
+        </script>
       </div>
     </div>
 </body>
