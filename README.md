@@ -17,7 +17,7 @@ If you have a Scratch account and would like to help out with the development, p
 You can view our progress here: https://dragon-drop-scratch.github.io/dragon-drop-www/
 
 ## Issues
-[![5 issues open](https://img.shields.io/badge/issues-6%20open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aopen)
+[![5 issues open](https://img.shields.io/badge/issues-5%20open-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aopen)
 <br>
 [![35 issues closed](https://img.shields.io/badge/issues-36%20closed-brightgreen.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/issues?q=is%3Aissue+is%3Aclosed)
 ### Open issues:
