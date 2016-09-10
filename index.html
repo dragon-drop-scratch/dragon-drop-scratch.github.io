@@ -136,12 +136,12 @@
     white-space: nowrap;
     overflow: hidden;
     width: 30em;
-    animation: type 4s steps(60, end); 
+    animation: type 4s steps(132, end); 
     animation-delay: 2s;
     }
     p:nth-child(2){
     animation-delay: 4s;
-    animation: type2 8s steps(60, end);
+    animation: type2 8s steps(132, end);
 
     }
     p a{
@@ -261,33 +261,36 @@
             <h1 class="whitetext">Make <i>your</i> website simply amazing
             today.</h1>
             <div class="p">
-                <div id="my-signin2">
-                 <script>
-                  function onSuccess(googleUser) {
-                   console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-                  }
-                  function onFailure(error) {
-                   console.log(error);
-                  }
-                  function renderButton() {
-                   gapi.signin2.render('my-signin2', {
-                   'scope': 'profile email',
-                   'width': 240,
-                   'height': 50,
-                   'longtitle': true,
-                   'theme': 'dark',
-                   'onsuccess': onSuccess,
-                   'onfailure': onFailure
-                  });
-                 }
-                </script>
-               </div>
+             <center>
+              <div id="my-signin2">
+               <script>
+                function onSuccess(googleUser) {
+                 console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                }
+                function onFailure(error) {
+                 console.log(error);
+                }
+                function renderButton() {
+                 gapi.signin2.render('my-signin2', {
+                 'scope': 'profile email',
+                 'width': 240,
+                 'height': 50,
+                 'longtitle': true,
+                 'theme': 'dark',
+                 'onsuccess': onSuccess,
+                 'onfailure': onFailure
+                });
+               }
+              </script>
+             </div>
             </div>
+               <br>
                <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
                 <a class="Button" href="./login.html" onclick="goto()" style=
                 "top: 94%">Log In</a> &nbsp; &nbsp; &nbsp; &nbsp; <a class=
                 "Button" href="./signup.html" onclick="goto()" style=
                 "top: 94%">Sign Up For Free</a>
+                </center>
             </div>
             <div class="p">
                 <a class="greyandtransparentlearnmorebutton" href=
