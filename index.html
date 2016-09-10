@@ -15,6 +15,7 @@
  source code? Start at <body> ;)
  -->
 <head>
+    <meta name="google-signin-client_id" content="689603573067-2cvduvek94n7rouvten1rfb0lv3v11ij.apps.googleusercontent.com">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="footer, address, phone, icons" name="keywords">
@@ -260,6 +261,29 @@
             <h1 class="whitetext">Make <i>your</i> website simply amazing
             today.</h1>
             <div class="p">
+                <div id="my-signin2">
+                 <script>
+                  function onSuccess(googleUser) {
+                   console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                  }
+                  function onFailure(error) {
+                   console.log(error);
+                  }
+                  function renderButton() {
+                   gapi.signin2.render('my-signin2', {
+                   'scope': 'profile email',
+                   'width': 240,
+                   'height': 50,
+                   'longtitle': true,
+                   'theme': 'dark',
+                   'onsuccess': onSuccess,
+                   'onfailure': onFailure
+                  });
+                 }
+                </script>
+               </div>
+            </div>
+               <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
                 <a class="Button" href="./login.html" onclick="goto()" style=
                 "top: 94%">Log In</a> &nbsp; &nbsp; &nbsp; &nbsp; <a class=
                 "Button" href="./signup.html" onclick="goto()" style=
