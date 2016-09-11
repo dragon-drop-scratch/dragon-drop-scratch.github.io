@@ -7,7 +7,7 @@ echo "<title>Loading...</title>";
 //Start the connection
 $servername = "db4free.net";
 $username = "d217710";
-$password = "csf30816";
+$password = "";
 $dbname = "d217710";
 $name='jeff';
 $pass='jeff';
