@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
-  
+    <meta name="google-signin-client_id" content="689603573067-2cvduvek94n7rouvten1rfb0lv3v11ij.apps.googleusercontent.com">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
     <link href="https://dragon-drop-scratch.github.io/dragon-drop-www/Essentials/style.css" rel="stylesheet">
-  <title>DragonDrop - Log In</title>
+    <title>DragonDrop - Log In</title>
   <style>
   h1 {
      font-family:'Play', sans-serif;
@@ -106,6 +106,27 @@
 <p>
 <input type="submit" value="Log in">
 <p>or <a href="./signup.html">Sign up</a></p>
+<div id="my-signin2">
+<script>
+  function onSuccess(googleUser) {
+    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  }
+  function onFailure(error) {
+    console.log(error);
+  }
+  function renderButton() {
+    gapi.signin2.render('my-signin2', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': onSuccess,
+      'onfailure': onFailure
+    });
+  }
+  </script>
+  </div>
 </p>
 </form>
 
