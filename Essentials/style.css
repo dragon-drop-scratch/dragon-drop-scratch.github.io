@@ -19,15 +19,17 @@ body {
     font: 24px Helvetica, sans-serif;
     text-align: center;
     position: fixed;
+    
 }
 #nav, .nav {
     list-style-type: none;
-    display: inline-block;
+    display: block;
     height: 60px;
     white-space: nowrap;
     font: 24px Helvetica, sans-serif;
     padding: 0;
     margin: 0;
+    top: 0;
 }
 .nav li {
     transition: all .15s ease;
