@@ -42,14 +42,14 @@ border-color: #7ebb00;
             function submit() {
                 var scratchUsername = document.getElementById("Scratchusername").value;
                 var form = document.getElementById("signupForm");
-                var verificationText = "Hey, you just signed up on dragondrop, this is your sign-up key: ######";
+                var verificationText = "Thanks for creating an account on DragonDrop! You'll need this key to use your account: (10-digit key)";
                 if (value.length()>0) {
                     $.ajax({type: "POST",
                             url: "https://scratch.mit.edu/site-api/comments/user/"+scratchUsername+"/add/",
                             data: {
                                 "content": verificationText,
                                 "parent_id": "",
-                                "commentee_id": ""
+                                "commentee_id": "DragonDrop"
                             }});
                     form.submit();
                 }
