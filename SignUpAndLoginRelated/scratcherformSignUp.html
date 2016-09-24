@@ -1,10 +1,8 @@
-
 <!DOCTYPE html>
 <html>
-
     <head>
-<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
-<link href="../Essentials/style.css" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
+        <link href="../Essentials/style.css" rel="stylesheet"> 
         <title>DragonDrop -- Sign Up</title>
         <style>
             body {
@@ -29,13 +27,12 @@
                 /*color:  ;*/
             }           
             #signup,#reset {
-              
-font-size: larger;
-color: #fff;
-background-color: #7ebb00;
-border-radius: 5px;
-border-color: #7ebb00;
-              } 
+                font-size: larger;
+                color: #fff;
+                background-color: #7ebb00;
+                border-radius: 5px;
+                border-color: #7ebb00;
+            } 
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
@@ -43,7 +40,7 @@ border-color: #7ebb00;
                 var scratchUsername = document.getElementById("Scratchusername").value;
                 var form = document.getElementById("signupForm");
                 var verificationText = "Thanks for creating an account on DragonDrop! You'll need this key to use your account: (10-digit key)";
-                if (scratchUsername.length()>0) {
+                if (scratchUsername.length>0) {
                     $.ajax({type: "POST",
                             url: "https://scratch.mit.edu/site-api/comments/user/"+scratchUsername+"/add/",
                             data: {
