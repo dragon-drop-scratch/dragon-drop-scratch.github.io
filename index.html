@@ -17,8 +17,9 @@
 
     <head>
         <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script type="text/javascript">console.info("Welcome to DragonDrop! Create your own professional website in just a few minutes without needing any coding knowledge.")</script>
         <meta name="google-signin-client_id" content="689603573067-2cvduvek94n7rouvten1rfb0lv3v11ij.apps.googleusercontent.com">
         <meta charset="utf-8">
@@ -427,6 +428,11 @@
                     document.location = "./HOME/mobile.html";
                 }
             </script>
+        <script>
+            $(window).on("scroll touchmove", function () {
+                $('#nav').toggleClass('nav-roll', $(document).scrollTop() > 0);
+            });
+        </script>
         </div>
     </body>
 
