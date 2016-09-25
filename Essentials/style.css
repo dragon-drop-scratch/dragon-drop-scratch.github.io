@@ -1,8 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Play';
 
 body {
-    background-color: #EDDEA4
-    /*Need to know the color scheme to do this*/
+    background-color: #D3515D
+    /*Adjusted this to the new color scheme*/
     ;
     margin: 0;
 }
@@ -23,7 +23,7 @@ body {
     padding: 0;
     margin: 0;
     top: 0;
-    background-color: #D1C598 /*Need to know the color scheme to do this*/;
+    background-color: #A52D35 /*Adjusted this to the new color scheme*/;
     color: #fff;
     -webkit-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
     -moz-box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.50);
