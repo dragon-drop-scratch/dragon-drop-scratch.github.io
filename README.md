@@ -15,4 +15,5 @@ If you have a Scratch account and would like to help out with the development, p
 
 ## View it so far
 You can view our progress here: https://dragon-drop-scratch.github.io/dragon-drop-www/
+<br>
 A prototype of the website editor can be found here: https://dragon-drop-scratch.github.io/prototype/
