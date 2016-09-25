@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
+    <link href="https://dragon-drop-scratch.github.io/dragon-drop-www/Essentials/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+    <title>DragonDrop - Log In</title>
+  <style>
+  h1 {
+     font-family:'Play', sans-serif;
+     text-align: center;
+     font-size:500%;
+  }
+  p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size:30px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight:lighter;
+    margin-top: 20px;
+  }
+  input[type=text], input[type=password] {
+    font-size: 25px;
+    border: 0;
+    margin: 5px;
+    background-color: rgba(0,0,0,0.05);
+    padding: 5px;
+    border-radius: 5px;
+    width: 40%;
+  }
+  body {
+    background-color: #ECE1CC;  
+  }
+  input[type=submit] {
+    font-size: 25px;
+    margin-top: 50px;
+    transition: 0.60s all ease-in;
+    border: 0;
+    background-color: #fcfcfc;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #fcfcfc;
+  }
+  input[type=submit]:hover {
+    transition: 0.30s all ease-out;
+    background-color: /*#f2f2f2*/ #ece1cc;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  .input {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 10;
+  }
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+    opacity:  1;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    #fff;
+     opacity:  1;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:    #fff;
+  }
+  </style>
+</head>
+<body>
+<h1>Log In:</h1>
+<br>
+<br>
+
+<form action="https://dragon-drop-scratch.github.io/prototype" method="post">
+<p class="input">Username: <input type="text" placeholder="Username" name="username"></p>
+<br>
+<p class="input">Password: <input type="password" placeholder="Password" name="password"></p>
+<p>
+<input type="submit" value="Log in">
+</p>
+</form>
+
+</body>
+</html>
