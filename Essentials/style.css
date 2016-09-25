@@ -21,7 +21,7 @@ body {
     position: fixed;
     
 }
-#nav, .nav {
+.nav {
     list-style-type: none;
     display: block;
     height: 60px;
