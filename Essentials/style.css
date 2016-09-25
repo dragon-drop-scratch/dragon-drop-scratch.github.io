@@ -81,10 +81,10 @@ body {
     font: 18px 'Play', sans-serif;
     font-weight: 700;
     padding: 5px;
-    background-color: #D1C598;
+    background-color: #C9424B;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    border-top: 1px solid #BDB28C;
+    border-top: 1px solid #EB5660;
 }
 #shell .section .section-content {
     font-family: Helvetica, sans-serif;
