@@ -38,6 +38,7 @@ body {
     margin: 0;
     top: 0;
     font-size: 0;
+    transition: height .25s ease;
 }
 .nav li {
     transition: all .15s ease;
