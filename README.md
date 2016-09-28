@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/badge/version-0.1.3--alpha.patch3-blue.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/releases/tag/0.1.3-alpha.patch3)
 [![License](https://img.shields.io/badge/license-Mozilla-AA00AA.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/blob/gh-pages/LICENSE)
 
-DragonDrop is a free, quick and easy soloution for creating your own professional website in minutes. With a couple of drags and drops you can have your very own personalised website. This was founded by Coke11 and more contributors have recently joined and helped out with the development progress. This website tool has been created with fellow Scratchers at https://scratch.mit.edu in mind as it includes elements and modules that will help any Scratcher create their very own, impressive Scratch website, whether if thats a blog to a showcase you can create it all here!
+DragonDrop quick and easy soloution for creating your own professional website in minutes. With a couple of drags and drops you can have your very own personalised website. This was founded by Coke11 and more contributors have recently joined and helped out with the development progress. This website tool has been created with fellow Scratchers at https://scratch.mit.edu in mind as it includes elements and modules that will help any Scratcher create their very own, impressive Scratch website, whether if thats a blog to a showcase you can create it all here!
 
 ## Using various parts of source code
 Source code is available for use, but appropriate credit <b>MUST</b> be given.
