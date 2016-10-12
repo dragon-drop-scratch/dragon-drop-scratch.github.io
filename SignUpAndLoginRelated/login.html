@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="689603573067-2cvduvek94n7rouvten1rfb0lv3v11ij.apps.googleusercontent.com">
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
     <link href="https://dragon-drop-scratch.github.io/dragon-drop-www/Essentials/style.css" rel="stylesheet">
@@ -70,6 +71,22 @@
   </style>
 </head>
 <body>
+  <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
 <!--Navigation-->
     <nav id="nav">
       <ul class="nav">
@@ -127,10 +144,8 @@
       'onfailure': onFailure
     });
   }
-  </script>
-  </div>
-</p>
+</script>
+</div>
 </form>
-
 </body>
 </html>
