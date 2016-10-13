@@ -305,6 +305,7 @@
                         <span>|</span>
                     </h1>
                     <br>
+                    <img src="https://trello-attachments.s3.amazonaws.com/57960533cad04f993050ae2d/57cb60147c60a41503901a22/9867d67f770bb2e6257ce2e0e5e9804c/ring-alt.svg" visible=false/>
                     <br>
                     <br>
                 </div>
@@ -413,6 +414,24 @@
                 }
             </script>
         <script>
+            function load(url) {
+    // display loading image here...
+    document.getElementById('loadingImg').visible = true;
+    // request your data...
+    var req = new XMLHttpRequest();
+    req.open("POST", url, true);
+
+    req.onreadystatechange = function () {
+        if (req.readyState == 4 && req.status == 200) {
+            // content is loaded...hide the gif and display the content...
+            if (req.responseText) {
+                document.getElementById('content').innerHTML = req.responseText;
+                document.getElementById('loadingImg').visible = false;
+            }
+        }
+    };
+    request.send(vars);
+}
             $(window).on("scroll touchmove", function () {
                 $('.nav').toggleClass('nav-roll', $(document).scrollTop() > 200);
             });
