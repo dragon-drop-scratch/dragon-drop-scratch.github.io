@@ -283,13 +283,11 @@
                 <br>
                 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
                 <center>
+                    <div>
                     <a class="Button" href="./SignUpAndLoginRelated/login.html" onclick="goto()" style="top: 94%">Log In</a><br><br>
                     <a class="Button" href="./SignUpAndLoginRelated/signup.html" onclick="goto()" style="top: 94%">Sign Up</a><br><br>
                     <a class="Button" href="https://dragon-drop-scratch.github.io/prototype" onclick="goto()" style="top: 94%">Try it for free</a>
                     </div>
-                        <div id="loader">
-                            <img src="https://trello-attachments.s3.amazonaws.com/57960533cad04f993050ae2d/57cb60147c60a41503901a22/9867d67f770bb2e6257ce2e0e5e9804c/ring-alt.svg"/>
-                        </div>
                 </center>
             <div class="p">
                  <a class="greyandtransparentlearnmorebutton" href="https://dragon-drop-scratch.github.io/dragon-drop-www/learnindexre.html" onclick="goto()">Learn More</a>
@@ -421,9 +419,7 @@
                     document.location = "./HOME/mobile.html";
                 }
             </script>
-        <script>
-            $(window).load(function() {      //Do the code in the {}s when the window has loaded 
-  $("#loader").fadeOut("fast");  //Fade out the #loader div
+        <script> //Fade out the #loader div
 });
     request.send(vars);
 }
