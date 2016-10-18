@@ -14,7 +14,7 @@ Source code is available for use, but appropriate credit <b>MUST</b> be given. S
 If you have a Scratch account and would like to help out with the development, please do. You can find the application forms all at: https://scratch.mit.edu/discuss/topic/211653
 
 ## View it so far
-[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](#)
+[![Build](https://img.shields.io/badge/build-failing-red.svg)](#)
 <br>
 You can view our progress here: https://dragon-drop-scratch.github.io/dragon-drop-www/
 <br>
