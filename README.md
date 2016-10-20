@@ -10,8 +10,12 @@ DragonDrop is a quick and easy soloution for creating your own professional webs
 ## Using various parts of source code
 Source code is available for use, but appropriate credit <b>MUST</b> be given. See the LICENSE file for more details.
 
-## Become a contributor
+## Help Us
+### Contribute
 If you have a Scratch account and would like to help out with the development, please do. You can find the application forms all at: https://scratch.mit.edu/discuss/topic/211653
+### Alpha Test
+If you have a Scratch account and would like to help out by alpha testing, please go here: https://scratch.mit.edu/studios/3486459/comments/
+
 
 ## View it so far
 [![Build](https://img.shields.io/badge/build-failing-red.svg)](#)
