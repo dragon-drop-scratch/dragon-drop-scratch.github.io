@@ -51,10 +51,10 @@ margin-right: 0;
 
 
 </div><script type="text/javascript">
+var Otimer;
 function changeText(cont1,cont2,speed){
 	var Otext=cont1.text();
 	var Ocontent=Otext.split("");
-	var Otimer;
 	var i=0;
 	function show(){
 		if(i<Ocontent.length)
@@ -63,7 +63,7 @@ function changeText(cont1,cont2,speed){
 			i=i+1;
 		};
 	};
-		var Otimer=setInterval(show,speed);	
+		var Otimer = setInterval(show,speed);	
 };
 $(document).ready(function(){
 	changeText($("p"),$(".p2"),75); //  150 = the Delay time in milliseconds between strokes.
