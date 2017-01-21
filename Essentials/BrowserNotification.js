@@ -1,5 +1,5 @@
 function detectBrowser() {
-  if (navigator.userAgent.indexOf("Firefox") != -1) {
+  if (!(navigator.userAgent.indexOf("Chrome") != -1)) {
     showBanner();
   }
 }
