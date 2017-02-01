@@ -1,5 +1,5 @@
 body {
-    background-color: #EDDEA4
+    background-color: white;
     /*Need to know the color scheme to do this*/
     ;
     margin: 0;
@@ -7,7 +7,7 @@ body {
 #nav {
     width: 100%;
     height: 60px;
-    background-color: #D1C598
+    background-color: #4286f4;
     /*Need to know the color scheme to do this*/
     ;
     color: #fff;
