@@ -1,0 +1,42 @@
+body {
+	margin: 0px;
+	font-family: 'Segoe UI';
+}
+
+h1 {
+	font-weight: normal;
+}
+
+.main-content {
+	padding: 5px 15px;
+	text-align: center;
+}
+
+.team {
+	padding: 5px 10px;
+}
+
+.team-member {
+	height: 296px;
+	width: 226px;
+	border: 1px solid #e9e7e7;
+	text-align: center;
+	border-radius: 4px;
+	padding-bottom: 22px;
+	margin: 22px 16px 0px;
+	font-size: 16px;
+}
+
+.name {
+	color: #4f545c;
+}
+
+.job-title {
+	color: #99aab5;
+}
+
+.icon {
+	width: 200px;
+	height: 200px;
+	font-size: 100% !important;
+}
