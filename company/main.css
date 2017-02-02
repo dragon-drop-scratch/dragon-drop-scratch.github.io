@@ -1,6 +1,6 @@
 body {
 	margin: 0px;
-	font-family: 'Segoe UI', Helvetica;
+	font-family: 'Segoe UI', Helvetica, Arial;
 }
 
 h1 {
@@ -26,7 +26,6 @@ h1 {
 	padding-bottom: 22px;
 	margin: 22px 16px 0px;
 	font-size: 16px;
-	display: flex;
 }
 
 .name {
