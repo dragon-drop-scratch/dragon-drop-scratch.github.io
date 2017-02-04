@@ -36,7 +36,7 @@ $menu_WIDTH: 150px;
   width: $menu_WIDTH;
   height: 40px;
   padding: 12px 0 0;
-  background: #c97676;
+  background: #003387;
   text-align: center;
   color: #ffffff;
   font-weight: bold;
@@ -48,7 +48,7 @@ $menu_WIDTH: 150px;
   content: "";
   display: block;
   height: 0;
-  border-top: 5px solid #c97676;
+  border-top: 5px solid #003387;
   border-left: ($menu_WIDTH / 2) solid transparent;
   border-right: ($menu_WIDTH / 2) solid transparent;
   border-bottom: 0 solid #dddddd;
@@ -61,8 +61,8 @@ $menu_WIDTH: 150px;
     0.3s border-top-color;
 }
 
-.menu-title:hover { background: #b96666; }
-.menu-title:hover:before { border-top-color: #b96666; }
+.menu-title:hover { background: #4286f4 ; }
+.menu-title:hover:before { border-top-color: #4286f4 ; }
 
 .menu:hover > .menu-title:before {
   border-top-width: 0;
@@ -90,20 +90,20 @@ $menu_WIDTH: 150px;
   transition: 0.2s 0.2s border-bottom-width ease-out;
 }
 
-.menu-title_2nd { background: #b96666; }
-.menu-title_2nd:hover { background: #c97676; }
-.menu-title_2nd:before { border-top-color: #b96666; }
-.menu-title_2nd:hover:before { border-top-color: #c97676; }
+.menu-title_2nd { background: #4286f4 ; }
+.menu-title_2nd:hover { background: #003387; }
+.menu-title_2nd:before { border-top-color: #4286f4 ; }
+.menu-title_2nd:hover:before { border-top-color: #003387; }
 
-.menu-title_3rd { background: #c97676; }
-.menu-title_3rd:hover { background: #b96666; }
-.menu-title_3rd:before { border-top-color: #c97676; }
-.menu-title_3rd:hover:before { border-top-color: #b96666; }
+.menu-title_3rd { background: #003387; }
+.menu-title_3rd:hover { background: #4286f4 ; }
+.menu-title_3rd:before { border-top-color: #003387; }
+.menu-title_3rd:hover:before { border-top-color: #4286f4 ; }
 
-.menu-title_4th { background: #b96666; }
-.menu-title_4th:hover { background: #c97676; }
-.menu-title_4th:before { border-top-color: #b96666; }
-.menu-title_4th:hover:before { border-top-color: #c97676; }
+.menu-title_4th { background: #4286f4 ; }
+.menu-title_4th:hover { background: #003387; }
+.menu-title_4th:before { border-top-color: #4286f4 ; }
+.menu-title_4th:hover:before { border-top-color: #003387; }
 
 .menu-dropdown {
   min-width: 100%;
