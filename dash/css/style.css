@@ -33,7 +33,7 @@ a {
   width: 150px;
   height: 40px;
   padding: 12px 0 0;
-  background: #c97676;
+  background: #4286f4 ;
   text-align: center;
   color: #ffffff;
   font-weight: bold;
@@ -45,7 +45,7 @@ a {
   content: "";
   display: block;
   height: 0;
-  border-top: 5px solid #c97676;
+  border-top: 5px solid #4286f4 ;
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
   border-bottom: 0 solid #dddddd;
@@ -57,11 +57,11 @@ a {
 }
 
 .menu-title:hover {
-  background: #b96666;
+  background: #3a77d8;
 }
 
 .menu-title:hover:before {
-  border-top-color: #b96666;
+  border-top-color: #3a77d8;
 }
 
 .menu:hover > .menu-title:before {
@@ -89,51 +89,51 @@ a {
 }
 
 .menu-title_2nd {
-  background: #b96666;
+  background: #3a77d8;
 }
 
 .menu-title_2nd:hover {
-  background: #c97676;
+  background: #4286f4 ;
 }
 
 .menu-title_2nd:before {
-  border-top-color: #b96666;
+  border-top-color: #3a77d8;
 }
 
 .menu-title_2nd:hover:before {
-  border-top-color: #c97676;
+  border-top-color: #4286f4 ;
 }
 
 .menu-title_3rd {
-  background: #c97676;
+  background: #4286f4 ;
 }
 
 .menu-title_3rd:hover {
-  background: #b96666;
+  background: #3a77d8;
 }
 
 .menu-title_3rd:before {
-  border-top-color: #c97676;
+  border-top-color: #4286f4 ;
 }
 
 .menu-title_3rd:hover:before {
-  border-top-color: #b96666;
+  border-top-color: #3a77d8;
 }
 
 .menu-title_4th {
-  background: #b96666;
+  background: #3a77d8;
 }
 
 .menu-title_4th:hover {
-  background: #c97676;
+  background: #4286f4 ;
 }
 
 .menu-title_4th:before {
-  border-top-color: #b96666;
+  border-top-color: #3a77d8;
 }
 
 .menu-title_4th:hover:before {
-  border-top-color: #c97676;
+  border-top-color: #4286f4 ;
 }
 
 .menu-dropdown {
