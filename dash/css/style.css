@@ -32,13 +32,21 @@ a {
   display: block;
   width: 150px;
   height: 60px;
-  padding: 12px 0 0;
   background: #4286f4 ;
   text-align: center;
   color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
   transition: 0.3s background-color;
+}
+
+.padding1{
+  
+  padding: 15px 0 0;
+}
+
+.padding2{
+  padding: 20px 0 0;
 }
 
 .menu-title:before {
