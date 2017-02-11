@@ -26,8 +26,8 @@ h1 {
 }
 
 .team-member {
-	height: 205px;
-    	width: 226px;
+	/*height: 205px;
+    	width: 226px;*/
     	border: 1px solid #e9e7e7;
     	text-align: center;
     	border-radius: 4px;
