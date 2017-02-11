@@ -14,18 +14,32 @@ h1 {
 
 .team {
 	padding: 5px 10px;
-	text-align: center;
+	align-items: center;
+    	justify-content: center;
+   	align-items: center;
+	display: flex;
+    	-webkit-box-direction: normal;
+    	-webkit-box-pack: center;
+   	flex-wrap: wrap;
+    	flex-direction: row;
+    	-webkit-box-align: stretch;
 }
 
 .team-member {
 	height: 296px;
-	width: 226px;
-	border: 1px solid #e9e7e7;
-	text-align: center;
-	border-radius: 4px;
-	padding-bottom: 22px;
-	margin: 22px 16px 0px;
-	font-size: 16px;
+    	width: 226px;
+    	border: 1px solid #e9e7e7;
+    	text-align: center;
+    	border-radius: 4px;
+    	padding-bottom: 22px;
+    	margin: 22px 16px 0px;
+    	font-size: 16px;
+    	display: flex;
+    	flex-direction: column;
+    	-webkit-box-orient: horizontal;
+    	-webkit-box-direction: normal;
+   	-webkit-box-align: center;
+    	align-items: center;
 }
 
 .name {
