@@ -26,7 +26,7 @@ h1 {
 }
 
 .team-member {
-	height: 296px;
+	height: 205px;
     	width: 226px;
     	border: 1px solid #e9e7e7;
     	text-align: center;
@@ -51,7 +51,8 @@ h1 {
 }
 
 .icon {
-	width: 200px;
-	height: 200px;
+	margin: 5px;
+	width: 200px !important;
+	height: 200px !important;
 	font-size: 100% !important;
 }
