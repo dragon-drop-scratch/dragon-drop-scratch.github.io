@@ -43,11 +43,11 @@ a {
 
 .padding1{
   
-  padding: 5px 0 0;
+  padding-top:10px;
 }
 
 .padding2{
-  padding: 2px 0 0;
+  padding-top:10px;
 }
 
 .menu-title:before {
