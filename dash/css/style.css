@@ -40,14 +40,7 @@ a {
   transition: 0.3s background-color;
 }
 
-.padding1{
-  
-  padding-top:10px;
-}
 
-.padding2{
-  padding-top:10px;
-}
 
 .menu-title:before {
   content: "";
