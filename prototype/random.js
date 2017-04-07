@@ -1,1 +1,1 @@
-var pleasejuststop = "should_we_hash_this_no_because_this_is_just_a_prototype_and_this_password_is_just_meant_as_a_test_132"
+var pleasejuststop = "this-is-a-pass"
