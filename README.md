@@ -1,5 +1,5 @@
 # DragonDrop official source code
-> View https://github.com/dragon-drop-scratch/html-app for the updated source code.
+> **Note:** View https://github.com/dragon-drop-scratch/html-app for the updated website design. This repo is only being used for the dashboard and editor.
 
 [![GitHub stars](https://img.shields.io/badge/star-dragon--drop--www-green.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/stargazers)
 [![GitHub watchers](https://img.shields.io/badge/fork-dragon--drop--www-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/subscription)
