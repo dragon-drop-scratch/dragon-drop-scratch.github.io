@@ -278,7 +278,7 @@ function alert2(alertedtext) {
 
 function previewIt() {
     var html = exportcode;
-    var dataURI = 'data:text/html,' + encodeURIComponent(html);
+    var dataURI = 'https://dragon-drop-scratch.github.io/prototype/preview/?content=' + encodeURIComponent(html);
     window.open(dataURI);
 }
 
