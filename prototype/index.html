@@ -470,7 +470,7 @@ Use alert2("") to use the alert function
       <ul id="contextMenu">
         <li class="dd-menu" onclick="window.location = 'http://dragondrops.net';">DragonDrop</li>
         <hr>
-        <li onclick="settingsDialog()">Settings</li>
+        <li onclick="settingsDialog('window', 'null')">Settings</li>
         <li id="copy">Copy</li>
         <li onclick="pasteHandler(e)">Paste</li>
       </ul>
@@ -551,7 +551,7 @@ Use alert2("") to use the alert function
 
 
     </script>
-    <script>
+    <script async>
       /*document.onkeypress=function(e) {
                             document.querySelector("#exportcode").innerHTML = exportcode;
                             var i = 1;
