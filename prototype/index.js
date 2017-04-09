@@ -23,7 +23,7 @@ function getCookie(cname) {
 //Set variables:
 var exportcode = "";
 //exportcode.innerHTML = "<style>body{font-family:helvetica;}</style>";
-exportcode = "<style>body{text-align:center;font-family:helvetica;}</style>";
+exportcode = "<style>body{text-align:center;font-family:'Segoe UI', helvetica, arial;}</style>";
 var elementslint = "";
 var textelement = "";
 var numofe = 0;
@@ -56,7 +56,7 @@ function drop(ev) {
             numofe = numofe + 1;
             document.getElementById(ev.target.id).innerHTML = y +
                 "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + pic + "' /></div>";
-            exportcode = exportcode + "<img src='" + pic + "' />";
+            exportcode = exportcode + "<img src='" + pic + "' /><br>";
         }
     }
     if (data == "ytembed") {
@@ -80,7 +80,7 @@ function drop(ev) {
                     inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
                 exportcode = exportcode +
                     "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
-                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe>";
+                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe><br>";
                 swal({
                         title: "Yay!",
                         text: "Element added!",
@@ -107,7 +107,7 @@ function drop(ev) {
                 }
             numofe = numofe + 1
                 document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe + "\")'></div><div id='" + numofe + "' " + inputValue + "</div>";
-                exportcode = exportcode + inputValue;
+                exportcode = exportcode + inputValue + "<br>";
                 swal({
                         title: "Success!",
                         text: "Element added!",
@@ -124,13 +124,13 @@ function drop(ev) {
         document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"link\", \"" + numofe + "\")'></div><a id='" + numofe + "' href='" +
             linkie + "' > " + linkietext + " <\/a></div>";
         exportcode = exportcode + "<a  href=" + linkie +
-            ">" + linkietext + "<\/a>";
+            ">" + linkietext + "<\/a><br>";
     }
 }
 
 function bgcolask() {
     swal({
-            title: "Background-color",
+            title: "Background Color",
             text: "Enter a HEX value or a color name.",
             type: "input",
             showCancelButton: true,
@@ -290,7 +290,7 @@ var confirmOnPageExit = function(e) {
     // If we haven't been passed the event get the window.event
     e = e || window.event;
 
-    var message = 'Woah!';
+    var message = 'Woah! You have unsaved changes.';
 
     // For IE6-8 and Firefox prior to version 4
     if (e) {
