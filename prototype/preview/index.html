@@ -11,7 +11,7 @@
       <img height="26" src="https://dragon-drop-scratch.github.io/i/dd2.png"> Site Preview
     </div>
     <div class="site-container">
-      <p style="font-family: 'Segoe UI', Helvetica, Arial;">Loading your site... Just a moment</p>
+      <p style="font-family: 'Segoe UI', Helvetica, Arial;"><img width="25" height="25" src="./wait.png">Loading your site... Just a moment</p>
     </div>
     <script async>
       function getParameterByName(name, url) {
@@ -29,8 +29,8 @@
     var sitecontent = getParameterByName("content");
     var sitecontainer = document.getElementsByClassName("site-container")[0];
     
-    if (sitecontent == "") {
-      sitecontainer.innerHTML = "<p style=\"font-family: 'Segoe UI', Helvetica, Arial;\">Failed to load site!</p>";
+    if (sitecontent == "" || sitecontent == null) {
+      sitecontainer.innerHTML = "<p style=\"font-family: 'Segoe UI', Helvetica, Arial;\"><img width=\"25\" height=\"25\" src=\"./error.png\">There was an error loading your preview.</p>";
     } else {
       sitecontainer.innerHTML = sitecontent;
     }
