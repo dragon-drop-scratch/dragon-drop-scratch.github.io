@@ -23,7 +23,7 @@ function getCookie(cname) {
 //Set variables:
 var exportcode = "";
 //exportcode.innerHTML = "<style>body{font-family:helvetica;}</style>";
-exportcode = "<style>body{font-family:helvetica;}</style>";
+exportcode = "<style>body{text-align:center;font-family:helvetica;}</style>";
 var elementslint = "";
 var textelement = "";
 var numoft = 0;
@@ -44,7 +44,7 @@ function drop(ev) {
     if (data == "text") {
         numoft = numoft + 1;
         getSelectionText()
-        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div id='text-edit' style='width: 700px;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numoft + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>";
+        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog()'></div><div id='text-edit' style='width: 75%;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numoft + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>";
         exportcode = exportcode + "<div id='dd-text" + numoft + "'>This is a text box <i>Enter text here...</i></div>" + "<br>";
     }
     if (data == "photo") {
@@ -52,7 +52,7 @@ function drop(ev) {
             "INSERT PHOTO LINK HERE");
         if (pic !== null) {
             document.getElementById(ev.target.id).innerHTML = y +
-                "<div class='element-wrapper'><img src='" + pic + "' /></div>";
+                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog()'></div><img src='" + pic + "' /></div>";
             exportcode = exportcode + "<img src='" + pic + "' />";
         }
     }
@@ -72,7 +72,7 @@ function drop(ev) {
                     return false
                 }
                 document.getElementById(ev.target.id).innerHTML = y +
-                    "<div class='element-wrapper'><iframe width=560 height=315 src=https://www.youtube.com/embed/" +
+                    "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog()'></div><iframe width=560 height=315 src=https://www.youtube.com/embed/" +
                     inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
                 exportcode = exportcode +
                     "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
@@ -102,7 +102,7 @@ function drop(ev) {
                     return false
                 }
                 document.getElementById(ev.target.id).innerHTML = y +
-                    '<div class="element-wrapper"><div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
+                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog()"></div><div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
                     inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
                 exportcode = exportcode +
                     '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
@@ -133,7 +133,7 @@ function drop(ev) {
                     return false
                 }
                 document.getElementById(ev.target.id).innerHTML = y +
-                    '<div class="element-wrapper"><div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
+                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog()"></div><div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
                     inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
                 exportcode = exportcode +
                     '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
@@ -162,7 +162,7 @@ function drop(ev) {
                     swal.showInputError("Please enter some HTML");
                     return false
                 }
-                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'>" + inputValue + "</div>";
+                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog()'></div>" + inputValue + "</div>";
                 exportcode = exportcode + inputValue;
                 swal({
                         title: "Success!",
@@ -177,7 +177,7 @@ function drop(ev) {
     if (data == "link") {
         var linkie = prompt("Enter the website address", "http://");
         var linkietext = prompt("What should this link say?")
-        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><a href=" +
+        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog()'></div><a href=" +
             linkie + " > " + linkietext + " <\/a></div>";
         exportcode = exportcode + "<a  href=" + linkie +
             ">" + linkietext + "<\/a>";
@@ -223,7 +223,7 @@ function faviconask() {
         }, function(inputValue) {
             if (inputValue === false) return false;
             if (inputValue === "") {
-                swal.showInputError("Please enter a link!!");
+                swal.showInputError("Enter a valid link!");
                 return false
             }
             changeFavicon(inputValue);
