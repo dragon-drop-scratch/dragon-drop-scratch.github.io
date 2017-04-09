@@ -169,7 +169,7 @@ function drop(ev) {
                     return false
                 }
             numofe = numofe + 1
-                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe + " "\")'></div><div id='" + numofe + "' " + inputValue + "</div>";
+                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe + "\")'></div><div id='" + numofe + "' " + inputValue + "</div>";
                 exportcode = exportcode + inputValue;
                 swal({
                         title: "Success!",
