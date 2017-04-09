@@ -232,5 +232,12 @@ img {
 }
 
 .element-wrapper:hover {
-    border: 2px dashed rgb(168, 168, 168);
+    border: 2px dashed rgb(162, 162, 162);
+}
+
+.settings-icon {
+	float: right;
+	width: 33px;
+    height: 33px;
+    background: url("https://maxcdn.icons8.com/windows10/PNG/32/Very_Basic/settings-32.png") no-repeat center center;
 }
