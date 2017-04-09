@@ -1,4 +1,4 @@
-var numoft = 0;
+var numofe = 0;
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -28,7 +28,7 @@ var exportcode = "";
 exportcode = "<style>body{text-align:center;font-family:helvetica;}</style>";
 var elementslint = "";
 var textelement = "";
-var numoft = 0;
+var numofe = 0;
 //end of set variables.
 
 function allowDrop(ev) {
@@ -44,6 +44,7 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     if (data == "text") {
+        numofe = numofe + 1;
         numoft = numoft + 1;
         getSelectionText()
         document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"text\", \"" + numoft + "\")'></div><div class='text-edit' id='" + numoft + "' style='width: 75%;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numoft + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>";
@@ -53,9 +54,9 @@ function drop(ev) {
         var pic = prompt("Leave a link to your picture here",
             "INSERT PHOTO LINK HERE");
         if (pic !== null) {
-            numoft = numoft + 1;
+            numofe = numofe + 1;
             document.getElementById(ev.target.id).innerHTML = y +
-                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numoft + "\")'></div><img id='" + numoft + "' src='" + pic + "' /></div>";
+                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + pic + "' /></div>";
             exportcode = exportcode + "<img src='" + pic + "' />";
         }
     }
@@ -74,9 +75,9 @@ function drop(ev) {
                     swal.showInputError("Please enter a Youtube video ID.");
                     return false
                 }
-                numoft = numoft + 1;
+                numofe = numofe + 1;
                 document.getElementById(ev.target.id).innerHTML = y +
-                    "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"ytembed\", \"" + numoft + "\")'></div><iframe id='" + numoft + "' width=560 height=315 src=https://www.youtube.com/embed/" +
+                    "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"ytembed\", \"" + numofe + "\")'></div><iframe id='" + numoft + "' width=560 height=315 src=https://www.youtube.com/embed/" +
                     inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
                 exportcode = exportcode +
                     "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
@@ -105,9 +106,9 @@ function drop(ev) {
                     swal.showInputError("Please enter a scratch project ID");
                     return false
                 }
-            numoft = numoft + 1
+            numofe = numofe + 1
                 document.getElementById(ev.target.id).innerHTML = y +
-                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog(\"scratchembed\", \"' + numoft + '\")"></div><div onclick="change_project()" style="padding:20px;"><iframe id="' + numoft + '" allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
+                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog(\"scratchembed\", \"' + numofe + '\")"></div><div onclick="change_project()" style="padding:20px;"><iframe id="' + numofe + '" allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
                     inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
                 exportcode = exportcode +
                     '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
@@ -137,9 +138,9 @@ function drop(ev) {
                     swal.showInputError("Please enter a scratch project ID");
                     return false
                 }
-            numoft = numoft + 1;
+            numofe = numofe + 1;
                 document.getElementById(ev.target.id).innerHTML = y +
-                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog(\"scratchembed\", \"' + numoft + '\")"></div><div onclick="change_project()" style="padding:20px;"><iframe id="' + numoft + '" allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
+                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog(\"scratchembed\", \"' + numofe + '\")"></div><div onclick="change_project()" style="padding:20px;"><iframe id="' + numofe + '" allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
                     inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
                 exportcode = exportcode +
                     '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
@@ -168,8 +169,8 @@ function drop(ev) {
                     swal.showInputError("Enter some code!");
                     return false
                 }
-            numoft = numoft + 1
-                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numoft " "\")'></div><div id='" + numoft + "' " + inputValue + "</div>";
+            numofe = numofe + 1
+                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe " "\")'></div><div id='" + numofe + "' " + inputValue + "</div>";
                 exportcode = exportcode + inputValue;
                 swal({
                         title: "Success!",
@@ -184,7 +185,7 @@ function drop(ev) {
     if (data == "link") {
         var linkie = prompt("Enter the website address", "http://");
         var linkietext = prompt("What should this link say?")
-        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"link\", \"" + numoft + "\")'></div><a id='" + numoft + "' href='" +
+        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"link\", \"" + numofe + "\")'></div><a id='" + numofe + "' href='" +
             linkie + "' > " + linkietext + " <\/a></div>";
         exportcode = exportcode + "<a  href=" + linkie +
             ">" + linkietext + "<\/a>";
