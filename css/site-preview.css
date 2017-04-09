@@ -4,6 +4,7 @@ body {
 }
 
 .navbar {
+  padding: 10px;
   font-family: 'Segoe UI', Helvetica, Arial;
   width: 100vw;
   font-size: 22px;
