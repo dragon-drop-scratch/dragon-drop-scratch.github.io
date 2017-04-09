@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://dragon-drop-scratch.github.io/css/site-preview.css">
+    <link href="https://dragon-drop-scratch.github.io/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Preview Your Site - DragonDrop</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <img height="22" src="https://dragon-drop-scratch.github.io/i/dd2.png"> Site Preview
+    </div>
+    <div class="site-container">
+      <p style="font-family: 'Segoe UI', Helvetica, Arial;">Loading your site... Just a moment</p>
+    </div>
+    <script async>
+      function getParameterByName(name, url) {
+        if (!url) {
+          url = window.location.href;
+        }
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    
+    var sitecontent = getParameterByName("content");
+    var site-container = document.getElementsByClassName("site-container")[0];
+    
+    if (sitecontent == "") {
+      site-container.innerHTML = "<p style="font-family: 'Segoe UI', Helvetica, Arial;">Failed to load site!</p>";
+    } else {
+      site-container.innerHTML = sitecontent;
+    }
+    </script>
+  </body>
+</html>
