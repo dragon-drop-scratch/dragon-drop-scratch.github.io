@@ -223,7 +223,8 @@ img {
 }
 
 .element-wrapper {
-    padding: 5px;
+    margin: 5px;
+    padding: 10px;
     border: 2px dashed rgb(172, 172, 172);
     border-radius: 4px;
     transition: 0.3s;
