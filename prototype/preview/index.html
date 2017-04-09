@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="navbar">
-      <img height="22" src="https://dragon-drop-scratch.github.io/i/dd2.png"> Site Preview
+      <img height="26" src="https://dragon-drop-scratch.github.io/i/dd2.png"> Site Preview
     </div>
     <div class="site-container">
       <p style="font-family: 'Segoe UI', Helvetica, Arial;">Loading your site... Just a moment</p>
@@ -27,12 +27,12 @@
     }
     
     var sitecontent = getParameterByName("content");
-    var site-container = document.getElementsByClassName("site-container")[0];
+    var sitecontainer = document.getElementsByClassName("site-container")[0];
     
     if (sitecontent == "") {
-      site-container.innerHTML = "<p style="font-family: 'Segoe UI', Helvetica, Arial;">Failed to load site!</p>";
+      sitecontainer.innerHTML = "<p style="font-family: 'Segoe UI', Helvetica, Arial;">Failed to load site!</p>";
     } else {
-      site-container.innerHTML = sitecontent;
+      sitecontainer.innerHTML = sitecontent;
     }
     </script>
   </body>
