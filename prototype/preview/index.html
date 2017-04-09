@@ -24,16 +24,18 @@
         if (!results) return null;
         if (!results[2]) return '';
         return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-    
-    var sitecontent = getParameterByName("content");
-    var sitecontainer = document.getElementsByClassName("site-container")[0];
-    
-    if (sitecontent == "" || sitecontent == null) {
-      sitecontainer.innerHTML = "<p style=\"font-family: 'Segoe UI', Helvetica, Arial;\"><img width=\"25\" height=\"25\" src=\"./error.png\">There was an error loading your preview.</p>";
-    } else {
-      sitecontainer.innerHTML = sitecontent;
-    }
+      }
+
+      window.onload = function() {
+        var sitecontent = getParameterByName("content");
+        var sitecontainer = document.getElementsByClassName("site-container")[0];
+
+        if (sitecontent == "" || sitecontent == null) {
+          sitecontainer.innerHTML = "<p style=\"font-family: 'Segoe UI', Helvetica, Arial;\"><img width=\"25\" height=\"25\" src=\"./error.png\">There was an error loading your preview.</p>";
+        } else {
+          sitecontainer.innerHTML = sitecontent;
+        }
+      }
     </script>
   </body>
 </html>
