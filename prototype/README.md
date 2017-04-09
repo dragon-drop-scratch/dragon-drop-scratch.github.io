@@ -1,11 +1,16 @@
 # Prototype Editor
 
 <h2>Dragon Drop Editor Alpha</h2>
+
 [![GitHub stars](https://img.shields.io/badge/star-dragon--drop--www-green.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/stargazers)
+
 [![GitHub watchers](https://img.shields.io/badge/fork-dragon--drop--www-red.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/subscription)
+
 [![Contribute](https://img.shields.io/badge/contribute-dragon--drop--www-00AAAA.svg)](https://scratch.mit.edu/discuss/topic/211653)
+
 [![Version](https://img.shields.io/badge/version-0.2.0.pre--release-blue.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/releases/tag/0.2.0.pre_release)
-[![License](https://img.shields.io/badge/license-MPL 2.0-AA00AA.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/blob/gh-pages/LICENSE)
+
+[![License](https://img.shields.io/badge/license-BY--NC--SA%204.0-AA00AA.svg)](https://github.com/dragon-drop-scratch/dragon-drop-www/blob/gh-pages/LICENSE.txt)
 
 Welcome to DragonDrop, your number one source for website designing. We’re dedicated to giving you the very best of templates for your new 
 website, focusing on making sure our customers are happy! Founded in 2016 by coke11, DragonDrop has come a long way from its beginnings 
