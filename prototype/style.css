@@ -226,8 +226,8 @@ img {
     padding: 5px;
     border: 2px dashed rgb(172, 172, 172);
     border-radius: 4px;
-    cursor: move;
     transition: 0.3s;
+    text-align: center !important;
 }
 
 .element-wrapper:hover {
