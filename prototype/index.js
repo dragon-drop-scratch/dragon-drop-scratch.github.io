@@ -90,69 +90,6 @@ function drop(ev) {
                     });
             });
     }
-    if (data == "scratchembed") {
-        swal({
-                title: "Scratch Embed",
-                text: "Enter a Scratch project ID",
-                type: "input",
-                showCancelButton: true,
-                closeOnConfirm: false,
-                animation: "slide-from-top",
-                inputPlaceholder: "118988263"
-            }, function(inputValue) {
-                if (inputValue === false) return false;
-                if (inputValue === "") {
-                    swal.showInputError("Please enter a scratch project ID");
-                    return false
-                }
-            numofe = numofe + 1
-                document.getElementById(ev.target.id).innerHTML = y +
-                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog(\"scratchembed\", \"' + numofe + '\")"></div><div onclick="change_project()" style="padding:20px;"><iframe id="' + numofe + '" allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
-                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
-                exportcode = exportcode +
-                    '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
-                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe>'
-                swal({
-                        title: "Success!",
-                        text: "Element added!",
-                        type: "success",
-                        timer: 3000,
-                        showConfirmButton: true
-                    });
-            });
-    }
-
-    function change_project() {
-        swal({
-                title: "Scratch Embed Change",
-                text: "Enter a Scratch project ID",
-                type: "input",
-                showCancelButton: true,
-                closeOnConfirm: false,
-                animation: "slide-from-top",
-                inputPlaceholder: "118988263"
-            }, function(inputValue) {
-                if (inputValue === false) return false;
-                if (inputValue === "") {
-                    swal.showInputError("Please enter a scratch project ID");
-                    return false
-                }
-            numofe = numofe + 1;
-                document.getElementById(ev.target.id).innerHTML = y +
-                    '<div class="element-wrapper"><div class="settings-icon" onClick="settingsDialog(\"scratchembed\", \"' + numofe + '\")"></div><div onclick="change_project()" style="padding:20px;"><iframe id="' + numofe + '" allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
-                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
-                exportcode = exportcode +
-                    '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
-                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe>'
-                swal({
-                        title: "Success!",
-                        text: "Element changed!",
-                        type: "success",
-                        timer: 2000,
-                        showConfirmButton: true
-                    });
-            });
-    }
     if (data == "html") {
         swal({
                 title: "Embed code",
