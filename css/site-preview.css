@@ -1,0 +1,19 @@
+.navbar {
+  font-family: 'Segoe UI', Helvetica, Arial;
+  width: 100vw;
+  font-size: 22px;
+  border-bottom: 1px solid #C9D3DF;
+  background-color: #EBEFF3;
+  color: #23272A !important;
+}
+
+.navbar p, img {
+  vertical-align: center;
+}
+
+.site-container {
+  background-color: white;
+  width: 100vw;
+  padding: 10px;
+  text-align: center;
+}
