@@ -44,7 +44,7 @@ function drop(ev) {
     if (data == "text") {
         numoft = numoft + 1;
         getSelectionText()
-        document.getElementById(ev.target.id).innerHTML = y + "<div id='text-edit' style='width: 700px;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numoft + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div>" + "<br>";
+        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div id='text-edit' style='width: 700px;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numoft + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>";
         exportcode = exportcode + "<div id='dd-text" + numoft + "'>This is a text box <i>Enter text here...</i></div>" + "<br>";
     }
     if (data == "photo") {
@@ -52,7 +52,7 @@ function drop(ev) {
             "INSERT PHOTO LINK HERE");
         if (pic !== null) {
             document.getElementById(ev.target.id).innerHTML = y +
-                "<img src='" + pic + "' />";
+                "<div class='element-wrapper'><img src='" + pic + "' /></div>";
             exportcode = exportcode + "<img src='" + pic + "' />";
         }
     }
@@ -72,8 +72,8 @@ function drop(ev) {
                     return false
                 }
                 document.getElementById(ev.target.id).innerHTML = y +
-                    "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
-                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe>";
+                    "<div class='element-wrapper'><iframe width=560 height=315 src=https://www.youtube.com/embed/" +
+                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
                 exportcode = exportcode +
                     "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
                     inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe>";
@@ -102,8 +102,8 @@ function drop(ev) {
                     return false
                 }
                 document.getElementById(ev.target.id).innerHTML = y +
-                    '<div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
-                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div>';
+                    '<div class="element-wrapper"><div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
+                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
                 exportcode = exportcode +
                     '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
                     inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe>'
@@ -133,13 +133,13 @@ function drop(ev) {
                     return false
                 }
                 document.getElementById(ev.target.id).innerHTML = y +
-                    '<div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
-                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div>';
+                    '<div class="element-wrapper"><div onclick="change_project()" style="padding:20px;"><iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
+                    inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe></div></div>';
                 exportcode = exportcode +
                     '<iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/' +
                     inputValue + '?autostart=false" frameborder="0" allowfullscreen></iframe>'
                 swal({
-                        title: "Yay!",
+                        title: "Success!",
                         text: "Element changed!",
                         type: "success",
                         timer: 2000,
@@ -162,10 +162,10 @@ function drop(ev) {
                     swal.showInputError("Please enter some HTML");
                     return false
                 }
-                document.getElementById(ev.target.id).innerHTML = y + inputValue;
+                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'>" + inputValue + "</div>";
                 exportcode = exportcode + inputValue;
                 swal({
-                        title: "Yay!",
+                        title: "Success!",
                         text: "Element added!",
                         type: "success",
                         timer: 3000,
@@ -177,32 +177,32 @@ function drop(ev) {
     if (data == "link") {
         var linkie = prompt("Enter the website address", "http://");
         var linkietext = prompt("What should this link say?")
-        document.getElementById(ev.target.id).innerHTML = y + "<a href=" +
-            linkie + " > " + linkietext + " <\/a>";
+        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><a href=" +
+            linkie + " > " + linkietext + " <\/a></div>";
         exportcode = exportcode + "<a  href=" + linkie +
-            ">  Hyperlink <\/a>";
+            ">" + linkietext + "<\/a>";
     }
 }
 
 function bgcolask() {
     swal({
             title: "Background-color",
-            text: "Enter a HEX value or a color name (an RGB Value).",
+            text: "Enter a HEX value or a color name.",
             type: "input",
             showCancelButton: true,
             closeOnConfirm: false,
             animation: "slide-from-top",
-            inputPlaceholder: "blue"
+            inputPlaceholder: "#00a2df"
         }, function(inputValue) {
             if (inputValue === false) return false;
             if (inputValue === "") {
-                swal.showInputError("Please enter a color!!");
+                swal.showInputError("Please enter a color!");
                 return false
             }
             document.getElementById("div1").style.backgroundColor = inputValue;
             addbgtoex(inputValue);
             swal({
-                    title: "Yay!",
+                    title: "Success!",
                     text: "Your colored background has been added :)",
                     type: "success",
                     timer: 3000,
@@ -228,7 +228,7 @@ function faviconask() {
             }
             changeFavicon(inputValue);
             swal({
-                    title: "Yay!",
+                    title: "Success!",
                     text: "Element added!",
                     type: "success",
                     timer: 3000,
@@ -293,8 +293,8 @@ function addbgtoex(bgcolaskit) {
 
 function themeask() {
     swal({
-            title: "Theme",
-            text: "Themes: 'Rasberry', 'Peace', and 'DragonDrop'",
+            title: "Choose a Theme",
+            text: "Themes: 'Raspberry', 'Peace', and 'DragonDrop'",
             type: "input",
             showCancelButton: true,
             closeOnConfirm: false,
@@ -302,8 +302,8 @@ function themeask() {
             inputPlaceholder: "Enter a Theme name"
         }, function(inputValue) {
             if (inputValue === false) return false;
-            if (inputValue === "") {
-                swal.showInputError("You forgot to fill out the theme!!");
+            if (inputValue === "" || !(inputValue == "DragonDrop" || inputValue == "Peace" || inputValue == "Raspberry")) {
+                swal.showInputError("Enter a valid theme!");
                 return false
             }
             swal(
@@ -315,11 +315,11 @@ function themeask() {
 }
 
 function templates() {
-    swal("Waoh!", "Feature not available!!", "error");
+    swal("Oh no!", "Feature not available!", "error");
 }
 
 function submit() {
-    swal("Waoh!", "Feature not available!!", "error");
+    swal("Oh no!", "Feature not available!", "error");
 }
 
 function closedialogue() {
