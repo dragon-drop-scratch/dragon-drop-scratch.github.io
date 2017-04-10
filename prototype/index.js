@@ -23,7 +23,7 @@ function getCookie(cname) {
 //Set variables:
 var exportcode = "";
 //exportcode.innerHTML = "<style>body{font-family:helvetica;}</style>";
-exportcode = "<style>body{text-align:center;font-family:'Segoe UI', helvetica, arial;}</style>";
+exportcode = "<style>body{color:black;text-align:center;font-family:'Segoe UI', helvetica, arial;}</style>";
 var elementslint = "";
 var textelement = "";
 var numofe = 0;
