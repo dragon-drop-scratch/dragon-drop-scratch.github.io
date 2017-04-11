@@ -283,7 +283,7 @@ function previewIt() {
 }
 
 function settingsDialog(elementType, elementId) {
-    swal("Oh no!", "This feature isn't available yet!", "error");
+    swal("Oh no!", "This feature isn't available yet!\nElement type: " + elementType + "\nElement ID: " + String(elementId), "error");
 }
 
 var confirmOnPageExit = function(e) {
