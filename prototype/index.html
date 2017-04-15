@@ -571,15 +571,15 @@ Use alert2("") to use the alert function
         while (i < numoft + 1) {
           a2 = "#dd-text" + i;
           b2 = "#dd-text-edit" + i;
-          a1 = document.querySelector(a2).innerHTML;
-          b1 = document.querySelector(b2).innerHTML;
+          a1 = $(a2).html();
+          b1 = $(b2).html();
           if (a1 != b1) {
-            document.querySelector(a2).innerHTML = b1;
+            $(a2).html(b1);
           }
           i++;
         }
-        exportcode = document.querySelector("#exportcode").innerHTML;
-        document.querySelector("#exportcode").innerHTML = "";
+        exportcode = $("#exportcode").html();
+        $("#exportcode").html("");
       }, 100);
 
     </script>
