@@ -566,7 +566,7 @@ Use alert2("") to use the alert function
                             document.querySelector("#exportcode").innerHTML = "";
                         }*/
       window.setInterval(function() {
-        document.querySelector("#exportcode").innerHTML = exportcode;
+        $("#exportcode").html(exportcode);
         var i = 1;
         while (i < numoft + 1) {
           a2 = "#dd-text" + i;
