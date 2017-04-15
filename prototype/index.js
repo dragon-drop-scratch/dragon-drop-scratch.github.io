@@ -147,7 +147,7 @@ function bgcolask() {
             addbgtoex(inputValue);
             swal({
                     title: "Success!",
-                    text: "Your colored background has been added :)",
+                    text: "Your background color has been updated",
                     type: "success",
                     timer: 3000,
                     showConfirmButton: true
@@ -208,6 +208,7 @@ function enter() {
                 title: "Password",
                 text: "Enter the password to continue",
                 type: "input",
+                inputType: "password",
                 showCancelButton: false,
                 closeOnConfirm: false,
                 animation: "slide-from-top",
@@ -215,7 +216,7 @@ function enter() {
             }, function(inputValue) {
                 if (inputValue === false) return false;
                 if (inputValue === "") {
-                    swal.showInputError("Enter a pssword first!!");
+                    swal.showInputError("Enter a pssword first!");
                     return false
                 }
                 if (inputValue === importvar) {
@@ -283,7 +284,63 @@ function previewIt() {
 }
 
 function settingsDialog(elementType, elementId) {
-    swal("Oh no!", "This feature isn't available yet!\nElement type: " + elementType + "\nElement ID: " + String(elementId), "error");
+    // text, img, ytembed, codeembed, link
+    if (elementType == "text") {
+        swal({
+            title: "Text Box Settings",
+            text: "Change the text box style, or press ESC to exit",
+            animation: "slide-from-top",
+            allowOutsideClick: true,
+            showCancelButton: true,
+            confirmButtonColor: "#C1C1C1",
+            confirmButtonText: "Text Color",
+            cancelButtonText: "Font Size",
+            closeOnCancel: false,
+            closeOnConfirm: false
+        }, function(isConfirm) {
+            if (isConfirm) {
+                // Text Color
+                swal({
+                    title: "Text Color",
+                    text: "Enter a HEX, RGB, or color value to change the text box color",
+                    type: "input",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                    closeOnConfirm: false,
+                    inputPlaceholder: "#23272A",
+                }, function(inputValue) {
+                    if (inputValue == false) return false;
+                    if (inputValue == "") {
+                        swal.showInputError("Enter a color!");
+                        return false;
+                    } else {
+                        document.getElementById(elementId).style.color = inputValue;
+                        swal.close();
+                    }})
+            } else {
+                // Font Size
+                swal({
+                    title: "Font Size",
+                    text: "Enter a pt, pixel, or font value to change the font size.",
+                    type: "input",
+                    showCancelButton: true,
+                    allowOutsideClick: true,
+                    closeOnConfirm: false,
+                    inputPlaceholder: "16px"
+                }, function(inputValue) {
+                    if (inputValue == false) return false;
+                    if (inputValue == "") {
+                        swal.showInputError("Enter a color!");
+                        return false;
+                    } else {
+                        document.getElementById(elementId).style.fontSize = inputValue;
+                        swal.close();
+                    }})
+            }
+        });
+    } else {
+        swal("Error", "An unknown internal error occurred. Please contact DragonDrop support at support.dragondrops.net.", "error");
+    }
 }
 
 var confirmOnPageExit = function(e) {
