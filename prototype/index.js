@@ -46,7 +46,7 @@ function drop(ev) {
         numofe = numofe + 1;
         numoft = numoft + 1;
         getSelectionText()
-        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"text\", \"" + numofe + "\")'></div><div class='text-edit' id='" + numofe + "' style='width: 75%;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numofe + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>";
+        $(ev.target.id).html(y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"text\", \"" + numofe + "\")'></div><div class='text-edit' id='" + numofe + "' style='width: 75%;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numofe + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>");
         exportcode = exportcode + "<div id='dd-text'>This is a text box. <i>Enter text here...</i></div>" + "<br>";
     }
     if (data == "photo") {
@@ -54,8 +54,8 @@ function drop(ev) {
             "INSERT PHOTO LINK HERE");
         if (pic !== null) {
             numofe = numofe + 1;
-            document.getElementById(ev.target.id).innerHTML = y +
-                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + pic + "' /></div>";
+            $(ev.target.id).html(y + 
+                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + pic + "' /></div>");
             exportcode = exportcode + "<img src='" + pic + "' /><br>";
         }
     }
@@ -75,9 +75,9 @@ function drop(ev) {
                     return false
                 }
                 numofe = numofe + 1;
-                document.getElementById(ev.target.id).innerHTML = y +
+                $(ev.target.id).html(y + 
                     "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"ytembed\", \"" + numofe + "\")'></div><iframe id='" + numoft + "' width=560 height=315 src=https://www.youtube.com/embed/" +
-                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
+                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>");
                 exportcode = exportcode +
                     "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
                     inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe><br>";
@@ -106,7 +106,7 @@ function drop(ev) {
                     return false
                 }
             numofe = numofe + 1
-                document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe + "\")'></div><div id='" + numofe + "' " + inputValue + "</div>";
+                $(ev.target.id).html(y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe + "\")'></div><div id='" + numofe + "' " + inputValue + "</div>");
                 exportcode = exportcode + inputValue + "<br>";
                 swal({
                         title: "Success!",
@@ -121,8 +121,8 @@ function drop(ev) {
     if (data == "link") {
         var linkie = prompt("Enter the website address", "http://");
         var linkietext = prompt("What should this link say?")
-        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"link\", \"" + numofe + "\")'></div><a id='" + numofe + "' href='" +
-            linkie + "' > " + linkietext + " <\/a></div>";
+        $(ev.target.id).html(y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"link\", \"" + numofe + "\")'></div><a id='" + numofe + "' href='" +
+            linkie + "' > " + linkietext + " <\/a></div>");
         exportcode = exportcode + "<a  href=" + linkie +
             ">" + linkietext + "<\/a><br>";
     }
@@ -143,7 +143,7 @@ function bgcolask() {
                 swal.showInputError("Please enter a color!");
                 return false
             }
-            document.getElementById("div1").style.backgroundColor = inputValue;
+            $("div1").css({"background-color" : inputValue});
             addbgtoex(inputValue);
             swal({
                     title: "Success!",
