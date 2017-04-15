@@ -343,7 +343,7 @@ var confirmOnPageExit = function(e) {
 };
 window.onbeforeunload = confirmOnPageExit;
 function textadd(type, h, text) {
-    t = document.getElementById('dd-text-edit' + h).innerHTML;
+    t = $('dd-text-edit' + h).html();
     //stuff = getSelectionText();
     if (text == undefined) {
         $('dd-text-edit' + h).html(t + "<" + type + "> style</" + type + " > ");
