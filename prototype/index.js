@@ -166,7 +166,7 @@ function faviconask() {
             inputPlaceholder: "favicon.ico"
         }, function(inputValue) {
             if (inputValue === false) return false;
-            if (inputValue === "") {
+            if (inputValue === "" || (inputValue.indexOf("http://") == -1 || inputValue.indexOf("https://") == -1 || inputValue.indexOf("www") == -1)) {
                 swal.showInputError("Enter a valid link!");
                 return false
             }
@@ -221,7 +221,7 @@ function enter() {
                 }
                 if (inputValue === importvar) {
 
-                    swal("Correct!!", "Welcome Alpha Tester!", "success");
+                    swal("Correct!", "Welcome Alpha Tester!", "success");
                     setCookie("pass", "true", "1");
                 } else {
                     swal.showInputError("Password incorrect");
@@ -286,58 +286,42 @@ function previewIt() {
 function settingsDialog(elementType, elementId) {
     // text, img, ytembed, codeembed, link
     if (elementType == "text") {
+        swal("Feature not available!", "", "error");
+    } else if (elementType == "img") {
+        swal("Feature not available!", "", "error");
+    } else if (elementType == "ytembed") {
         swal({
-            title: "Text Box Settings",
-            text: "Change the text box style, or press ESC to exit",
-            animation: "slide-from-top",
-            allowOutsideClick: true,
+            title: "Youtube Embed",
+            text: "You can change the embed's link from here.",
+            type: "input",
             showCancelButton: true,
-            confirmButtonColor: "#C1C1C1",
-            confirmButtonText: "Text Color",
-            cancelButtonText: "Font Size",
-            closeOnCancel: false,
-            closeOnConfirm: false
-        }, function(isConfirm) {
-            if (isConfirm) {
-                // Text Color
-                swal({
-                    title: "Text Color",
-                    text: "Enter a HEX, RGB, or color value to change the text box color",
-                    type: "input",
-                    showCancelButton: true,
-                    allowOutsideClick: true,
-                    closeOnConfirm: false,
-                    inputPlaceholder: "#23272A",
-                }, function(inputValue) {
-                    if (inputValue == false) return false;
-                    if (inputValue == "") {
-                        swal.showInputError("Enter a color!");
-                        return false;
-                    } else {
-                        document.getElementById(elementId).style.color = inputValue;
-                        swal.close();
-                    }})
-            } else {
-                // Font Size
-                swal({
-                    title: "Font Size",
-                    text: "Enter a pt, pixel, or font value to change the font size.",
-                    type: "input",
-                    showCancelButton: true,
-                    allowOutsideClick: true,
-                    closeOnConfirm: false,
-                    inputPlaceholder: "16px"
-                }, function(inputValue) {
-                    if (inputValue == false) return false;
-                    if (inputValue == "") {
-                        swal.showInputError("Enter a color!");
-                        return false;
-                    } else {
-                        document.getElementById(elementId).style.fontSize = inputValue;
-                        swal.close();
-                    }})
+            closeOnConfirm: false,
+            animation: "slide-from-top",
+            inputPlaceholder: "oykOAfgbiZ4"
+        }, function(inputValue) {
+            if (inputValue === false) return false;
+            if (inputValue === "") {
+                swal.showInputError("Please enter a Youtube video ID.");
+                return false
             }
+            document.getElementById(elementId).innerHTML = y +
+                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"ytembed\", \"" + elementId + "\")'></div><iframe id='" + numoft + "' width=560 height=315 src=https://www.youtube.com/embed/" +
+                inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
+            exportcode = exportcode +
+                "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
+                inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe><br>";
+            swal({
+                    title: "Yay!",
+                    text: "Element added!",
+                    type: "success",
+                    timer: 3000,
+                    showConfirmButton: true
+                });
         });
+    } else if (elementType == "codeembed") {
+        
+    } else if (elementType == "link") {
+        swal("Feature not available!", "", "error");
     } else {
         swal("Error", "An unknown internal error occurred. Please contact DragonDrop support at support.dragondrops.net.", "error");
     }
