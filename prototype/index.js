@@ -346,8 +346,8 @@ function textadd(type, h, text) {
     t = document.getElementById('dd-text-edit' + h).innerHTML;
     //stuff = getSelectionText();
     if (text == undefined) {
-        document.getElementById('dd-text-edit' + h).innerHTML = t + "<" + type + "> style</" + type + " > ";
+        $('dd-text-edit' + h).html(t + "<" + type + "> style</" + type + " > ");
     } else {
-        document.getElementById('dd-text-edit' + h).innerHTML = t + "<" + type + ">" + text + "</" + type + " > ";
+        $('dd-text-edit' + h).html(t + "<" + type + ">" + text + "</" + type + " > ");
     }
 }
