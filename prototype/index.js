@@ -285,46 +285,7 @@ function previewIt() {
 
 function settingsDialog(elementType, elementId) {
     // text, img, ytembed, codeembed, link
-    if (elementType == "text") {
-        swal("Feature not available!", "", "error");
-    } else if (elementType == "img") {
-        swal("Feature not available!", "", "error");
-    } else if (elementType == "ytembed") {
-        swal({
-            title: "Youtube Embed",
-            text: "You can change the embed's link from here.",
-            type: "input",
-            showCancelButton: true,
-            closeOnConfirm: false,
-            animation: "slide-from-top",
-            inputPlaceholder: "oykOAfgbiZ4"
-        }, function(inputValue) {
-            if (inputValue === false) return false;
-            if (inputValue === "") {
-                swal.showInputError("Please enter a Youtube video ID.");
-                return false
-            }
-            document.getElementById(elementId).innerHTML = y +
-                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"ytembed\", \"" + elementId + "\")'></div><iframe id='" + numoft + "' width=560 height=315 src=https://www.youtube.com/embed/" +
-                inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
-            exportcode = exportcode +
-                "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
-                inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe><br>";
-            swal({
-                    title: "Yay!",
-                    text: "Element added!",
-                    type: "success",
-                    timer: 3000,
-                    showConfirmButton: true
-                });
-        });
-    } else if (elementType == "codeembed") {
-        
-    } else if (elementType == "link") {
-        swal("Feature not available!", "", "error");
-    } else {
-        swal("Error", "An unknown internal error occurred. Please contact DragonDrop support at support.dragondrops.net.", "error");
-    }
+    window.open('settings?rel=' + String(elementType) + "&id=" + String(elementId))
 }
 
 var confirmOnPageExit = function(e) {
