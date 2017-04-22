@@ -32,6 +32,12 @@ body {
 	color: white;
 	font-size: 20px;
 	top: 10px;
+	background: #A52D35;
+}
+
+.white-blue a {
+	text-decoration: none;
+	color: white;
 }
 
 .syms {
@@ -63,13 +69,13 @@ body {
 	z-index: 100;
 }
 
-#contextMenuContainer #contextMenu {
+#contextMenuContainer,#contextMenu {
 	list-style: none;
 	padding: 0px;
 	font-size: 20px;
 }
 
-#contextMenuContainer #contextMenu li {
+#contextMenuContainer,#contextMenu li {
 	font-size: 20px;
 	font-family: Helvetica;
 	cursor: pointer;
@@ -80,9 +86,8 @@ body {
 	text-align: center;
 }
 
-#contextMenuContainer #contextMenu .dd-menu {
+#contextMenuContainer,#contextMenu, .dd-menu {
 	color: #ddd;
-	cursor: url("https://cdn2.scratch.mit.edu/get_image/user/17757195_60x60.png?v=1471181436.56");
 }
 
 #exportcode {
