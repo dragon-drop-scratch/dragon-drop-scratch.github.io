@@ -239,14 +239,14 @@ SOFTWARE.
           $("#exportcode").html(exportcode);
           // The start number
           var i = 1;
-          // Update all of the `#dd-text*` elements to match the `.dd-text-edit*` elements.
+          // Update all of the `#dd-text*` elements to match the `#dd-text-edit*` elements.
           // `numoft` holds the amount of text elements.
           while (i < numoft + 1) {
             a2 = "#dd-text" + i;
-            b2 = ".dd-text-edit" + i;
+            b2 = "#dd-text-edit" + i;
             a1 = $(a2).html();
             b1 = $(b2).html();
-            // Make sure `#dd-text*` does not equal `.dd-text-edit*`.
+            // Make sure `#dd-text*` does not equal `#dd-text-edit*`.
             if (a1 != b1) {
               // If they are not equal update `#dd-text*` to make them equal.
               $("#exportcode" + a2).html(b1);
