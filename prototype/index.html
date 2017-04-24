@@ -51,57 +51,30 @@ SOFTWARE.
         <div class="accordion">
           <ul>
             <li>
-              <input checked class="accordion-select" name="select" type="radio">
-              <div class="accordion-title">
-                <span>Basics</span>
-              </div>
-              <div class="accordion-content">
                 <h4>Text</h4>
                 <img draggable="true" height="45" id="text" ondragstart="drag(event)" src="https://trello-attachments.s3.amazonaws.com/57b47ba6692b3505e6d0a7ee/437x244/55f794060c601788cb058bb5974f63d2/text.png" width="81">
                 <h4>Image</h4>
                 <img align="center" draggable="true" height="45" id="photo" ondragstart="drag(event)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEUeHh7z8/UAAAB5enmZmZkICAgSERH8/P5vb27///8NDQ3y8vSAgID29vgbGxvr6+zk5OU+Pj0WFhbZ2tzg4OJ/f3/Q0dPb3N6Pj4/LzM69vsHExcfOz9GoqKhnZ2evsLSJiYkpKSm5ublKSkpTU1M5OTkxMTG2t7toaGienp+rrLBQUFAqKipfX190dHQ8PDytSkkuAAAKeklEQVR4nO2de3eiPhPHNV5ixAACiwJab13d/nbb5/2/uyehutsElEnQSHry/WP39JxK+TiTTC6TSW8w7n1zOUL75QjtlyO0X47QfjlC++UI7ZcjtF+O0H45QvvlCO2XI7RfjtB+OUL75QjtlyO0X47QfjlC++UI7ZcjbC/fj67J9/1H//UHE0YjhFDv5/ya/necsl+YPhbzcYQRQodlnnjklnAQbwY7NHog5KMIx+iwDgimtN8gSjFZLCP0MMbHEEZokpJGuH+UmO6Pj2J8CCH6HSvwfUKSzXj6gFd5CGGE9qp8XLg/QfKj/PH0rLG2he9PiOYBVufjInvRU320m8x+lJpNdrpefHdCNMEaBjybMfGjf0/yR3v8Rbkm4r0J0YwIL03xbYnfBvV2/xBRIvgCDitODNKdCdEPCTDczrY3NFuLHk2Dv4jTrfioPl6OdF7pvoSjX9JbBWzIclNoIn0lwcUZUS55Oy20jHhXwugo9TF03fhSyJM+sjp/BBUyYfZ8QhTKLwUgDMSP9Mnw8zNo3z0borUcJnQI+2ReNsUOtsPoZyUOahHS+GzEzvWlKKsEwmbH8qfV4QGZlOM3H+0xuUQV0oF4GB1I5V37eIAaJPcn/Hu5WAv1XgZnvez0LKhJ6I+B78rsEYQ3VTu9Ii81jx9FzS92H0IfofGvYZ6GgaQrgzV6U/Wf6cvPXmT75YHFVgOEEToOY8ynttqjTw3x7wITr2A+r9wY1Qgj9L4i+iPr1qCYrv+oMqoQ+uhVeWZ7b2G8H6v1OQqE42n+bL6Skc6UzAgnRK+e5sz23iIZUuhXwYRoWRPuniTqzeEDOCghWncHkHc57+DGCCRkA6hnU4kiYEQYYbcsWAofgN4HIkSDzgH2aR+4rQMhrJkWdUA0hfkphBAldwiDnqT2T8RLECKAEC3bmpAT8fFzGCZMbEbBf2iPSXoQP20m9FE7wJIuTBZJeJmNMNA4Zj+XlC2eDFu4aSasrr4o4jHDhUFfmIuwqYIXLuI44ZD6TycHwNimkdCP9Bsht16SBF79EygNkjQOWxiS7gFGbCScbnVNWJovvIJ3eccgTlsYEtISGwnRQs+GJR9zzqbfox5n1ESELDA2Efo/9YI9A0yurWtI4oyhHuNl4bEN4UgrVHADhgovGqSxnqviZjdtIqxfQWsQN+Dt9ieLJtyM6n+J/GqMBY2ElSXpZnEDqn4vNFgtNKyImxfVGwj9nrqTwlugIFpGDtUPNe9HNRDWLmTflLqH/n3bWN1TadKWcPyiTMgAFT/y73VX6ohtCacDRS9lgGofEF43yVQRcWvCH2qENwApvuwkETlBoQVie8KZEuE1QIpJkA9f5hHfYtn9HqxTXL/0SheKjmqY0PNq2yAl4ducs03LrNIxT7lEk4LWPZqmaagSNMwSel5YEyYoSd85nC+IWXM6rFtiplmsEhcNEwY1gZ7EB4RKPOHBn5DLuh2sYqHgp0YJWSOsbnPTARpdyXbmjOOiEo1oqNLbmCWsNkKcjtCNbG7OOKmYkTVFuJ+aJKzxUbIu29+N5/s++lP5GFXwU4OENYGCbNFtvpJximI5k4pFRagRTRKGleSmAQCQLwShVEYsYqgRzRFWuxkyAwGWiNJKCQ0LqBENEsomZDM3GGCJKM1GMNiIxggrJqQxGJBnA8uTNN4Su0YoLcvQaKpw5MeXdw5oDuxOTRFWBqRlLwMG5IiiD5TD004RSk5a+qgCIJtqS37q5QnIiMYIpX6GvI4Uj6X50qIezmF9jTFCMdrTVNWEfBtWMCKNYX2NIULZSck7Uj5Z6EvpqUEBclNjhEJPSgN1E7I/JS56AXtTU4RiM8Rv6ibkRhSAaJF2h1COFeSgdSxUTM6nKaghGiIMxHGlp+Ok7G9Nvv4tmhSQhVdThEJHQwsdJ2W9qbiDEIAioilCYRKLh3pZ9b64C0RPkK7GGOHXH3ms0CGUjjPQEyTmGyIUu1Jy1Dx/LnY1OId0pk8hxJFWR8MI34SuBhQuDBEmAqFmV8oIt47w2xECQv5TCPvahMvO2lDqS3uah+fFDLpu9aViPNQbllaixamzhHigG/HjzkZ8aVy61h21iUCdIlyI8x49wmguTIGDTo1LY3EVSa8zlbrSRZfmFt5CHLZNtIyIUsETsqI7M2AWEMV1Gq1DyVKCGc5XXSIMxbU2PNJwU3lhfwNaMDW21iY1xKW6Edn8V3hG0q21tiAWx20ay4mjD3ExsSgSSOKnuVX9pKURfammBt7AtmbM7czE0vahqhHlVhiC4r1RQtGl8F7NiNI6G+uOYU5qcIc0lIxI1GKiGAvZ84BOanIPOJUr6ajMocQVGh7uu7YHzAfflXwKeFNEcvElCjWh0WyTihHB+8DoVc6nAZvQbD6N1BL7GLhPWgFk4xmoCc1mfaVy54cXkNqkcrUvnk0DT2wzSeiFaSUFL5g3bdJEaCgD0hBuQsO5iXElv5Sywc2tLtVHvbSaYLrJYHkYpgnr/JS9QXy43hpHaFtNEsYFMA3jGYRJtRZWn5L9sbY5+gh9hNWn02SjkstuOs97UWmKJWPxLtVD5jne/jKoO3YR/Kfgo+ZPIwSxHDLOjMFmEn3WsxqV/x2Wq/pjJXSjlMhu/rxFmF6pTsDPlGTr4fbHbPm2T+m1Ukz0BE+efQYh3w1eXT16yKtZfdYsvXq0jZ7yWOlAiXFCjpgpn678K3VA84Qloubpbw6ofALRPGHpqHU9aqNosClULfgUQo6YZs3n8GXR5L9C45jsMwh5jxoXio2R0mKTaR11fgZheRQ4S1XKDrLBdq5XWaE9oeop2VK84EBagOv20D4zYKxXVqE14bgyeYOJMS4ymKvS/mpTaJfGaE0YvWrWwOJmjIsiaSojSfsZc9CFZl0MnqzbktA/alf5KhkzNhO62iDZICfJmf20+UClPxqrRuiXACrrCy1WecEhK3NjimlSbE5nvgfW4GkkrJ0sqDAm8SrPeaj7WnmWtdLTJi/StnWU8LaxLG0j4bpVJbNLGaw0K3KuginPT6d9XqwuxbDaPP9c+7sNoXrZiFpIXg5rEadMK/5PfK781bpsW3NHA6iidK9qdJdSZuf/71KWjm7uQSiXt9eUXHPvDkX3+Omj5nJmjYTq9VvMiUIK0QMq0rXpTR8rMgMU+G4m1B7WPFyAAQ2IsO5GgG6IfEBqtAMI/U6WLwUXMAXVL+1QGegvokfQ9iSsym7WQSuSD1jFaxChnK/UBQEqtSkQ9qKdXoGyxwlDCnsqEPbGx24h4vzeFct7453ufXGPEAGMR1UJexGqlgN6kiiZKVwAAb8bwUfb593d8VU4PKjccKFygwfaFc+/4ALTocrdD4q3sPjod0ae2Rz5NSyR4rVIijfpRGheXhH7DDqKSbwdKWcfK9+GFCH0+pZ6lJC6CxsfJfalhvn2j87FwTo3WvEd+d3hZWJOv97nY93Ln3VvJfOjsUnpHrxtQWiPHKH9coT2yxHaL0dovxyh/XKE9ssR2i9HaL8cof1yhPbLEdovR2i/HKH9coT2yxHaL0dovxyh/XKE9ssR2i9HaL8cof36/oQfaPS91dsPv7n+D7op/CvjTwZ/AAAAAElFTkSuQmCC"
                 width="45">
-              </div>
-              <div class="accordion-separator"></div>
             </li>
             <li>
-              <input class="accordion-select" name="select" type="radio">
-              <div class="accordion-title">
-                <span>Embeds</span>
-              </div>
-              <div class="accordion-content">
                 <h4>YouTube Video</h4>
                 <img align="center" draggable="true" height="45" id="ytembed" ondragstart="drag(event)" src="https://upload.wikimedia.org/wikipedia/commons/7/71/New_youtube_logo.png">
                 <h4>Embed Code</h4>
                 <img align="center" draggable="true" height="45" id="html" ondragstart="drag(event)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png">
-              </div>
-              <div class="accordion-separator"></div>
             </li>
             <li>
-              <input class="accordion-select" name="select" type="radio">
-              <div class="accordion-title">
-                <span>Style</span>
-              </div>
-              <div class="accordion-content">
                 <h4>Background Color</h4>
                 <img align="center" height="45" id="backgroundcolor" onclick="bgcolask()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Blue_pen_icon.svg/2000px-Blue_pen_icon.svg.png">
                 <h4>Favicon</h4>
                 <img align="center" height="45" id="favicon" onclick="faviconask()" src="https://cdn2.scratch.mit.edu/get_image/user/17757195_60x60.png?v=1471181436.56">
                 <!--<h4>Theme</h4>
                 <img align="center" height="45" id="favicon" onclick="themeask()" src="https://cdn2.scratch.mit.edu/get_image/user/17757195_60x60.png?v=1471181436.56">-->
-              </div>
-              <div class="accordion-separator"></div>
+
             </li>
             <li>
-              <input class="accordion-select" name="select" type="radio">
-              <div class="accordion-title">
-                <span>Extra</span>
-              </div>
-              <div class="accordion-content">
                 <h4>Export Code</h4>
                 <img align="center" height="45" id="favicon" onclick="exportdacode()" src="https://image.freepik.com/free-icon/html-file-extension-interface-symbol_318-45345.png">
-              </div>
-              <div class="accordion-separator"></div>
             </li>
           </ul>
         </div>
