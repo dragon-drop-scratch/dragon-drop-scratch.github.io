@@ -224,7 +224,7 @@ SOFTWARE.
 
     </script>
     <script async>
-      /*document.onkeypress=function(e) {
+      document.onkeypress=function(e) {
                             document.querySelector("#exportcode").innerHTML = exportcode;
                             var i = 1;
                             while (i < numoft + 1) {
@@ -239,7 +239,7 @@ SOFTWARE.
                             }
                             exportcode = document.querySelector("#exportcode").innerHTML;
                             document.querySelector("#exportcode").innerHTML = "";
-                        }*/
+                        }
       window.setInterval(function() {
         $("#exportcode").html(exportcode);
         var i = 1;
