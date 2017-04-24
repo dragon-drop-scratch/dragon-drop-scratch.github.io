@@ -236,7 +236,7 @@ SOFTWARE.
       window.onload = function() {
         document.onkeypress=function(e) {
           // Set `#exportcode` DIV to the value of `exportcode`.
-          document.getElementById("#exportcode").innerHTML = exportcode;
+          $("#exportcode").html(exportcode);
           // The start number
           var i = 1;
           // Update all of the `#dd-text*` elements to match the `#dd-text-edit*` elements.
