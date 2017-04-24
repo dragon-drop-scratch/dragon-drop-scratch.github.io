@@ -235,7 +235,7 @@ SOFTWARE.
       // Detect when user presses a key.
       document.onkeypress=function(e) {
         // Set `#exportcode` DIV to the value of `exportcode`.
-        $("#exportcode").html(exportcode);
+        document.getElementById("#exportcode").innerHTML = exportcode;
         // The start number
         var i = 1;
         // Update all of the `#dd-text*` elements to match the `#dd-text-edit*` elements.
