@@ -254,8 +254,11 @@ SOFTWARE.
           i++;
         }
         exportcode = $("#exportcode").html();
-        $("#exportcode").html("");
       }, 100);
+      
+      $('select').on('change', function() {
+        alert( this.value );
+      })
 
     </script>
   </body>
