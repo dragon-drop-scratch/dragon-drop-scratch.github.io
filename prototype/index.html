@@ -231,21 +231,6 @@ SOFTWARE.
       *  content from the `#exportcode` DIV.
       */
       document.onkeypress=function(e) {
-                            document.querySelector("#exportcode").innerHTML = exportcode;
-                            var i = 1;
-                            while (i < numoft + 1) {
-                                a2 = "#dd-text" + i;
-                                b2 = "#dd-text-edit" + i;
-                                a1 = document.querySelector(a2).innerHTML;
-                                b1 = document.querySelector(b2).innerHTML;
-                                if (a1 != b1) {
-                                    document.querySelector(a2).innerHTML = b1;
-                                }
-                                i++;
-                            }
-                            exportcode = document.querySelector("#exportcode").innerHTML;
-                            document.querySelector("#exportcode").innerHTML = "";
-                        }
       window.setInterval(function() {
         $("#exportcode").html(exportcode);
         var i = 1;
@@ -260,6 +245,7 @@ SOFTWARE.
           i++;
         }
         exportcode = $("#exportcode").html();
+        
       }, 100);
 
     </script>
