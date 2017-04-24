@@ -224,30 +224,41 @@ SOFTWARE.
 
     </script>
     <script async>
-      /* Text updater 
+      /* Start Text updater 
       *  `How it works:`
       *  it `spills` out the `exportcode` var into the element `#exportcode`. Then querySelectors (innerHTML)
-      *  reads the content of that DIV and updates the value of a element inside of it. Then the code deletes all
-      *  content from the `#exportcode` DIV.
+      *  reads the content of that DIV and updates the value of a element inside of it. Then it takes all the
+      *  content from the `#exportcode` DIV and moves it to the `exportcode` variable. Then the code deletes
+      *  all content from the `#exportcode` DIV.
       */
+      
+      // Detect when user presses a key.
       document.onkeypress=function(e) {
-      window.setInterval(function() {
+        // Set `#exportcode` DIV to the value of `exportcode`.
         $("#exportcode").html(exportcode);
+        // The start number
         var i = 1;
+        // Update all of the `#dd-text*` elements to match the `#dd-text-edit*` elements.
+        // `numoft` holds the amount of text elements.
         while (i < numoft + 1) {
           a2 = "#dd-text" + i;
           b2 = "#dd-text-edit" + i;
           a1 = $(a2).html();
           b1 = $(b2).html();
+          // Make sure `#dd-text*` does not equal `#dd-text-edit*`.
           if (a1 != b1) {
-            $(a2).html(b1);
+            // If they are not equal update `#dd-text*` to make them equal.
+            $("#exportcode" + a2).html(b1);
           }
+          // Then change the number and re-run the script.
           i++;
         }
+        // Update the `exportcode` variable to match the `#exportcode` DIV.
         exportcode = $("#exportcode").html();
-        
-      }, 100);
-
+        // Empty the `#exportcode` DIV. (Just to test I put `Empty` to fill it :D)
+        $("#exportcode").html("Empty");
+        }
+        /* End Text Updater */
     </script>
   </body>
 
