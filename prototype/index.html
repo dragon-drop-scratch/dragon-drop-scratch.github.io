@@ -224,6 +224,12 @@ SOFTWARE.
 
     </script>
     <script async>
+      /* Text updater 
+      *  `How it works:`
+      *  it `spills` out the `exportcode` var into the element `#exportcode`. Then querySelectors (innerHTML)
+      *  reads the content of that DIV and updates the value of a element inside of it. Then the code deletes all
+      *  content from the `#exportcode` DIV.
+      */
       document.onkeypress=function(e) {
                             document.querySelector("#exportcode").innerHTML = exportcode;
                             var i = 1;
