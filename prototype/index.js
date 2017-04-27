@@ -56,10 +56,11 @@ function drop(ev) {
             text: "Enter the link to the photo you want.",
             type: "input",
             inputType: "url",
-            showCancelButton: true
+            showCancelButton: true,
+            closeOnConfirm: false
         }, function(value) {
-            if (value == false) return false;
-            if (value == "" || (value.indexOf("http://")  == -1 && value.indexOf("https://") == -1)) {
+            if (value === false) return false;
+            if (value === "" || (value.indexOf("http://")  == -1 && value.indexOf("https://") == -1)) {
                 swal.showInputError("Enter a valid URL.");
                 return false
             }
@@ -67,6 +68,7 @@ function drop(ev) {
             document.getElementById(ev.target.id).innerHTML = y + 
                 "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + value + "' /></div>";
             exportcode = exportcode + "<img src='" + value + "' /><br>";
+            swal.close();
         });
     }
     if (data == "ytembed") {
@@ -85,9 +87,9 @@ function drop(ev) {
                     return false
                 }
                 numofe = numofe + 1;
-                $(ev.target.id).html(y + 
+                document.getElementById(ev.target.id).innerHTML = y + 
                     "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"ytembed\", \"" + numofe + "\")'></div><iframe id='" + numoft + "' width=560 height=315 src=https://www.youtube.com/embed/" +
-                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>");
+                    inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe></div>";
                 exportcode = exportcode +
                     "<iframe width=560 height=315 src=https://www.youtube.com/embed/" +
                     inputValue + " frameborder=" + 0 + " allowfullscreen><\/iframe><br>";
@@ -116,7 +118,7 @@ function drop(ev) {
                     return false
                 }
             numofe = numofe + 1
-                $(ev.target.id).html(y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe + "\")'></div><div id='" + numofe + "' " + inputValue + "</div>");
+                 document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"codeembed\", \"" + numofe + "\")'></div><div id='" + numofe + "' " + inputValue + "</div>";
                 exportcode = exportcode + inputValue + "<br>";
                 swal({
                         title: "Success!",
@@ -131,8 +133,8 @@ function drop(ev) {
     if (data == "link") {
         var linkie = prompt("Enter the website address", "http://");
         var linkietext = prompt("What should this link say?")
-        $(ev.target.id).html(y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"link\", \"" + numofe + "\")'></div><a id='" + numofe + "' href='" +
-            linkie + "' > " + linkietext + " <\/a></div>");
+         document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"link\", \"" + numofe + "\")'></div><a id='" + numofe + "' href='" +
+            linkie + "' > " + linkietext + " <\/a></div>";
         exportcode = exportcode + "<a  href=" + linkie +
             ">" + linkietext + "<\/a><br>";
     }
@@ -153,7 +155,7 @@ function bgcolask() {
                 swal.showInputError("Please enter a color!");
                 return false
             }
-            $("div1").css({"background-color" : inputValue});
+            document.getElementById("div1").style.backgroundColor =  inputValue;
             addbgtoex(inputValue);
             swal({
                     title: "Success!",
@@ -176,7 +178,7 @@ function faviconask() {
             inputPlaceholder: "favicon.ico"
         }, function(inputValue) {
             if (inputValue === false) return false;
-            if (inputValue === "" || (inputValue.indexOf("http://") == -1 || inputValue.indexOf("https://") == -1 || inputValue.indexOf("www") == -1)) {
+            if (inputValue == "" || (inputValue.indexOf("http://") == -1 || inputValue.indexOf("https://") == -1 || inputValue.indexOf("www") == -1)) {
                 swal.showInputError("Enter a valid link!");
                 return false
             }
