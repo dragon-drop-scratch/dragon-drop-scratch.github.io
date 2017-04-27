@@ -14,4 +14,4 @@ DragonDrop is a quick and easy soloution for creating your own professional webs
 We do allow people to use various SMALL parts of the source code for their own projects. However no matter what piece of source code that is you must give credit to the entire development team at DragonDrop. You must get express permission from both @golden-scratch and @coke11.
 
 ## Be a contributor
-If you have a Scratch account and would like to help out with the development, please do. You can find the application forms all at: https://scratch.mit.edu/discuss/topic/211653
+If you would like to help with DragonDrop development, please contact us via support@dragondrops.net or at https://scratch.mit.edu/discuss/topic/211653
