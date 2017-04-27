@@ -59,7 +59,7 @@ function drop(ev) {
             showCancelButton: true
         }, function(value) {
             if (value == false) return false;
-            if (value == "" || (value.indexOf("http://")  = -1 && value.indexOf("https://") = -1)) {
+            if (value == "" || (value.indexOf("http://")  == -1 && value.indexOf("https://") == -1)) {
                 swal.showInputError("Enter a valid URL.");
                 return false
             }
