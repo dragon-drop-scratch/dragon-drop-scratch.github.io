@@ -67,7 +67,7 @@ function drop(ev) {
             document.getElementById(ev.target.id).innerHTML = y + 
                 "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + value + "' /></div>";
             exportcode = exportcode + "<img src='" + value + "' /><br>";
-        })
+        });
     }
     if (data == "ytembed") {
         swal({
