@@ -4,7 +4,8 @@
 	width: 200px;
 	position: fixed;
 	z-index: -1;
-	background-color: #acacac;
+	background-color: lightgray;
+	overflow-y: auto;
 }
 
 #div1 {
@@ -24,8 +25,8 @@ img {
 
 body {
 	margin: 0;
-	font-family: helvetica;
-	background: rgb(92, 92, 92);
+	font-family: 'Segoe UI', helvetica, arial;
+	background: white;
 }
 
 .white-blue {
@@ -87,7 +88,7 @@ body {
 }
 
 #contextMenuContainer,#contextMenu, .dd-menu {
-	color: #ddd;
+	color: black;
 }
 
 #exportcode {
@@ -278,4 +279,5 @@ img:active {
 
 ul {
 	list-style-type: none;
+	padding: 0px;
 }
