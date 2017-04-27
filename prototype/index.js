@@ -55,10 +55,11 @@ function drop(ev) {
             title: "Add a Picture",
             text: "Enter the link to the photo you want.",
             type: "input",
-            inputType: "url"
+            inputType: "url",
+            showCancelButton: true
         }, function(value) {
             if (value == false) return false;
-            if (value == "" || !(value.indexOf("http://")  != -1 || value.indexOf("https://") != -1)) {
+            if (value == "" || (value.indexOf("http://")  = -1 && value.indexOf("https://") = -1)) {
                 swal.showInputError("Enter a valid URL.");
                 return false
             }
