@@ -51,14 +51,22 @@ function drop(ev) {
         exportcode = exportcode + "<div id='dd-text" + numoft + "'>This is a text box. <i>Enter text here...</i></div>" + "<br>";
     }
     if (data == "photo") {
-        var pic = prompt("Leave a link to your picture here",
-            "INSERT PHOTO LINK HERE");
-        if (pic !== null) {
+        swal({
+            title: "Add a Picture",
+            text: "Enter the link to the photo you want.",
+            type: "input",
+            inputType: "url"
+        }, function(value) {
+            if (value == false) return false;
+            if (value == "" || !(value.indexOf("http://")  != -1 || value.indexOf("https://") != -1)) {
+                swal.showInputError("Enter a valid URL.");
+                return false
+            }
             numofe = numofe + 1;
             document.getElementById(ev.target.id).innerHTML = y + 
-                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + pic + "' /></div>";
-            exportcode = exportcode + "<img src='" + pic + "' /><br>";
-        }
+                "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"img\", \"" + numofe + "\")'></div><img id='" + numoft + "' src='" + value + "' /></div>";
+            exportcode = exportcode + "<img src='" + value + "' /><br>";
+        })
     }
     if (data == "ytembed") {
         swal({
