@@ -275,3 +275,7 @@ img:active {
     background: url("https://maxcdn.icons8.com/windows10/PNG/32/Very_Basic/settings-32.png") no-repeat center center;
 	vertical-align: center;
 }
+
+ul {
+	list-style-type: none;
+}
