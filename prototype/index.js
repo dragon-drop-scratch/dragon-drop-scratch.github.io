@@ -44,11 +44,10 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     console.log("The data is: " + data);
     if (data == "text") {
-        numofe = numofe + 1;
         numoft = numoft + 1;
         getSelectionText()
-        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div class='settings-icon' onClick='settingsDialog(\"title\", \"" + numofe + "\")'></div><div class='text-edit" + numoft + "' id='" + numofe + "' style='width: 75%;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numofe + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>";
-        exportcode = exportcode + "<div id='dd-text" + numoft + "'><i></i></div>" + "<br>";
+        document.getElementById(ev.target.id).innerHTML = y + "<div class='element-wrapper'><div id='text-edit' style='width: 700px;border: 1px solid rgb(187, 187, 187);border-radius: 2px;background-color: rgb(224, 224, 224);padding: 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;text-align: center;margin-bottom: 5px;'><button onclick=textadd('i',numoft)><i>Italic</i></button><button onclick=textadd('b',numoft)><b>Bold</b></button><button onclick=textadd('u',numoft)><u>Underline</u></button><button onclick=textadd('s',numoft)><s>Strikethrough</s></button><button onclick=textadd('span',numoft)>Plain</button></div><div id='dd-text-edit" + numoft + "' class='outline-tt' contenteditable>This is a text box <i>Enter text here...</i></div></div>" + "<br>";
+        exportcode = exportcode + "<div id='dd-text" + numoft + "'>This is a text box <i>Enter text here...</i></div>" + "<br>";
     }
     if (data == "title") {
         numofe = numofe + 1;
