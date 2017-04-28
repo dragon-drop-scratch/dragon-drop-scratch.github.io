@@ -297,7 +297,7 @@ function alert2(alertedtext) {
 
 function previewIt() {
     var html = exportcode;
-    var dataURI = 'data:text/html, ' + html;
+    var dataURI = 'data:text/html,' + encodeURIComponent(html);
     window.open(dataURI);
 }
 
